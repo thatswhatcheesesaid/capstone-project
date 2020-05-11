@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' type='text/css' href='./restaurant-user.css'>
     <title>Restaurant User</title>
 </head>
 <body>
@@ -35,7 +36,30 @@
                 </ul>
             </li>
         </ul>
-    <h2> Use Case:</h2>
+    <h2> User Story:</h2>
         <p>As a restaurant user, I want to find the best restaurant for mac and cheese in Albuquerque.</p>
+    <h2>Use Case </h2>
+        <p>Dalton is having a lunch meeting with a client to talk over renewing the business insurance policy. He wants
+            to find the best macaroni and cheese restaurant near the client's business location. Dalton opens up the
+            That's What Cheese Said web page to look for all the restaurants. Looking at all of the suggestions, he picks
+            a restaurant that is near the top of the restaurant list and close to the business. Dalton suggests this to
+            the client and they meet there for lunch.
+        </p>
+    <h2>Interaction Flow</h2>
+        <p><strong>Precondition:</strong>Dalton is on the homepage website</p>
+        <p><strong>Postcondition:</strong>Dalton has decided where to eat</p>
+        <p><strong>Interaction Flow:</strong></p>
+            <ul>
+                <li>Dalton clicks on Restaurant Ranker</li>
+                <li>Server returns list of restaurants in order of popularity</li>
+                <li>Dalton clicks on the first restaurant to find its address</li>
+                <li>Server returns the restaurant's information including address</li>
+                <li>Dalton is not satisfied with the location of this restaurant, so he returns to the list</li>
+                <li>Server returns list of restaurants in Albuquerque</li>
+                <li>Dalton clicks on the second restaurant in the list.</li>
+                <li>Server returns the second restaurant's information including address</li>
+                <li>Dalton is satisfied with the location of the restaurant</li>
+            </ul>
+        <p><strong>Frequency of Use:</strong>3 Times a week</p>
 </body>
 </html>
