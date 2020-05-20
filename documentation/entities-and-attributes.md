@@ -38,4 +38,4 @@
 2. many profiles can fork many restaurants (many to many relation)
 3. many profiles can cheesey many pictures (many to many relation)
 4. a restaurant can have many forks (1 to many relation)
-a foodpic can have many cheeseys (a foodpic can have many cheeseys)
+5. a foodpic can have many cheeseys (a foodpic can have many cheeseys)
