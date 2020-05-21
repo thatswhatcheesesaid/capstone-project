@@ -6,13 +6,15 @@ import {Route, Switch} from "react-router";
 import {FourOhFour} from "./pages/FourOhFour";
 import {Home} from "./pages/Home";
 import { PicturePage } from './pages/PicturePage'
+import { NewPage } from './pages/NewPage'
 
 const Routing = () => (
   <>
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route component={PicturePage()}/>
+        <Route component={PicturePage}/>
+        <Route component={NewPage}/>
         <Route component={FourOhFour}/>
       </Switch>
     </BrowserRouter>
