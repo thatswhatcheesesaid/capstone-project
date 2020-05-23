@@ -3,6 +3,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import Image from 'react-bootstrap/Image'
 import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 
 export function PicturePage(){
@@ -42,8 +43,14 @@ export function PicturePage(){
 <Container>
 	<h1 className="display-3 text-center py-4">Vote Here</h1>
 	<Row>
-		<Image src="blue-box-500px.png" alt="this is a box of mac and cheese" className="pr-5"/>
-		<Image src="blue-box-500px.png" alt="this is a box of mac and cheese" className="pl-5"/>
+		<Col className="pr-5 text-center">
+			<Image src="blue-box-500px.png" alt="this is a box of mac and cheese"/>
+			<p>This is the name of the restaurant</p>
+		</Col>
+		<Col className="pl-5 text-center">
+			<Image src="blue-box-500px.png" alt="this is a box of mac and cheese"/>
+			<p>This is the name of the restaurant</p>
+		</Col>
 	</Row>
 </Container>
 
