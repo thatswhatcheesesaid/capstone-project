@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button'
 
 
 export function PicturePage(){
+
 	return(
 	<>
 {/*This is the navbar*/}
@@ -26,14 +27,16 @@ export function PicturePage(){
 		</Navbar>
 	</Container>
 
+<main style={{ backgroundColor: "black" }}>
+
 {/*This is the title*/}
-		<Container fluid className="text-center py-5 bg-primary">
+		<Container fluid className="text-center text-light py-5">
 			<h1 className="display-1">Mac and Cheese</h1>
 		</Container>
 
 {/*This is the top 5 pics*/}
-		<Container fluid className="bg-primary">
-			<h1 className="display-3 text-center py-4">Top 5</h1>
+		<Container fluid>
+			<h1 className="display-3 text-center text-light py-4">Top 5</h1>
 			<Row className="justify-content-around">
 				<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
 				<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
@@ -44,48 +47,50 @@ export function PicturePage(){
 		</Container>
 
 {/*This is the voting*/}
-<Container fluid className="bg-primary">
-	<h1 className="display-3 text-center py-4">Vote Here</h1>
-	<Row className="justify-content-center">
-		<Col className="pr-5 text-center">
-			<Image src="blue-box-500px.png" alt="this is a box of mac and cheese"/>
-			<p>This is the name of the restaurant</p>
-			<Button className="bg-warning"><strong>Cheesey</strong></Button>
-		</Col>
-		<Col className="pl-5 text-center">
-			<Image src="blue-box-500px.png" alt="this is a box of mac and cheese"/>
-			<p>This is the name of the restaurant</p>
-			<Button className="bg-warning"><strong>Cheesey</strong></Button>
-		</Col>
-	</Row>
-</Container>
+	<Container fluid className="text-light">
+		<h1 className="display-3 text-center py-4">Vote Here</h1>
+		<Row className="justify-content-center">
+			<Col className="pr-5 text-center">
+				<Image src="blue-box-500px.png" alt="this is a box of mac and cheese"/>
+				<p>This is the name of the restaurant</p>
+				<Button className="bg-warning"><strong>Cheesey</strong></Button>
+			</Col>
+			<Col className="pl-5 text-center">
+				<Image src="blue-box-500px.png" alt="this is a box of mac and cheese"/>
+				<p>This is the name of the restaurant</p>
+				<Button className="bg-warning"><strong>Cheesey</strong></Button>
+			</Col>
+		</Row>
+	</Container>
 
 {/*This is the bottom message*/}
-<Container fluid className="py-5 bg-primary">
-	<Row>
-		<Col>
-			<h1 className="text-center"><strong>Vote on the cheesiest pictures. Each click will shuffle new pictures for more votes.</strong></h1>
-		</Col>
-	</Row>
-</Container>
+	<Container fluid className="py-5 text-light">
+		<Row>
+			<Col>
+				<h1 className="text-center"><strong>Vote on the cheesiest pictures. Each click will shuffle new pictures for more votes.</strong></h1>
+			</Col>
+		</Row>
+	</Container>
 
 
 {/*This is the upload button*/}
-<Container fluid className="bg-primary pb-5">
-	<Row>
-		<Col className="text-center">
-			<Button className="bg-warning"><strong>Upload your picture</strong></Button>
-		</Col>
-	</Row>
-</Container>
+	<Container fluid className="pb-5 text-light">
+		<Row>
+			<Col className="text-center">
+				<Button className="bg-warning"><strong>Upload your picture</strong></Button>
+			</Col>
+		</Row>
+	</Container>
+
+</main>
 
 {/*This is the footer*/}
-<Container fluid className="bg-warning py-3">
-	<Row>
-		<Col>
-			<p className="text-center">Copyright info</p>
-		</Col>
-	</Row>
-</Container>
+	<Container fluid className="bg-warning py-3">
+		<Row>
+			<Col>
+				<p className="text-center">Copyright info</p>
+			</Col>
+		</Row>
+	</Container>
 		</>
 	)}
