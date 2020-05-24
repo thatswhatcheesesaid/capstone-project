@@ -6,14 +6,31 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
+// import Style from 'react-bootstrap/Style'
 
-
-export function PicturePage(){
+export function PicturePage() {
 
 	return(
 	<>
+
+{/*here are the button colors*/}
+<style type ='text/css'>
+	{`
+		.btn-flat {
+		background-color: rgb(255, 137, 6);
+		color: black;
+		}
+	
+	.btn-rigid {
+	background-color: rgb(15, 14, 23);
+	color: white;
+	}
+	
+	`}
+</style>
+
 {/*This is the navbar*/}
-	<Container fluid className="px-0 bg-warning">
+	<Container fluid className="px-0" style={{ backgroundColor: 'rgb(255, 137, 6)' }}>
 		<Navbar>
 			<Navbar.Brand className="display-1">
 				<span style={{fontSize: 48}}>That's What Cheese Said</span>
@@ -31,12 +48,12 @@ export function PicturePage(){
 
 {/*This is the title*/}
 		<Container fluid className="text-center text-light py-5">
-			<h1 className="display-1">Mac and Cheese</h1>
+			<h1 className="display-1" style={{ color: 'rgb(167, 169, 190)'}}>Mac and Cheese</h1>
 		</Container>
 
 {/*This is the top 5 pics*/}
 		<Container fluid>
-			<h1 className="display-3 text-center text-light py-4">Top 5</h1>
+			<h1 className="display-3 text-center py-4" style={{ color: 'rgb(167, 169, 190)'}}>Top 5</h1>
 			<Row className="justify-content-around">
 				<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
 				<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
@@ -48,17 +65,17 @@ export function PicturePage(){
 
 {/*This is the voting*/}
 	<Container fluid className="text-light">
-		<h1 className="display-3 text-center py-4">Vote Here</h1>
+		<h1 className="display-3 text-center py-4" style={{ color: 'rgb(167, 169, 190)'}}>Vote Here</h1>
 		<Row className="justify-content-center">
 			<Col className="pr-5 text-center">
 				<Image src="blue-box-500px.png" alt="this is a box of mac and cheese"/>
-				<p>This is the name of the restaurant</p>
-				<Button className="bg-warning"><strong>Cheesey</strong></Button>
+				<p style={{ color: 'rgb(167, 169, 190)'}}>This is the name of the restaurant</p>
+				<Button variant='flat'><strong>Cheesey</strong></Button>
 			</Col>
 			<Col className="pl-5 text-center">
 				<Image src="blue-box-500px.png" alt="this is a box of mac and cheese"/>
-				<p>This is the name of the restaurant</p>
-				<Button className="bg-warning"><strong>Cheesey</strong></Button>
+				<p style={{ color: 'rgb(167, 169, 190)'}}>This is the name of the restaurant</p>
+				<Button variant='flat'><strong>Cheesey</strong></Button>
 			</Col>
 		</Row>
 	</Container>
@@ -77,7 +94,7 @@ export function PicturePage(){
 	<Container fluid className="pb-5 text-light">
 		<Row>
 			<Col className="text-center">
-				<Button className="bg-warning"><strong>Upload your picture</strong></Button>
+				<Button variant="flat"><strong>Upload your picture</strong></Button>
 			</Col>
 		</Row>
 	</Container>
@@ -85,7 +102,7 @@ export function PicturePage(){
 </main>
 
 {/*This is the footer*/}
-	<Container fluid className="bg-warning py-3">
+	<Container fluid className= "py-3" style={{ backgroundColor: 'rgb(255, 137, 6)' }}>
 		<Row>
 			<Col>
 				<p className="text-center">Copyright info</p>
