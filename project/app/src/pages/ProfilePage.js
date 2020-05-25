@@ -50,10 +50,10 @@ export function ProfilePage () {
 					{/*<Nav.Link href="#Pictures">Pictures</Nav.Link>*/}
 					{/*<Nav.Link href="#Log In">Log In</Nav.Link>*/}
 					{/*<Nav.Link href="#About Us">About Us</Nav.Link>*/}
-					<Button className="mx-3 " ><Nav.Link href="#">Restaurants</Nav.Link></Button>
-					<Button classnName="mx-3"><Nav.Link href="#Pictures">Pictures</Nav.Link></Button>
-					<Button className="mx-3"><Nav.Link href="#Log In">Log In</Nav.Link></Button>
-					<Button className="mr-3"><Nav.Link href="#About Us">About Us</Nav.Link></Button>
+					<Button className="m-2" ><Nav.Link href="#">Restaurants</Nav.Link></Button>
+					<Button className="m-2"><Nav.Link href="#Pictures">Pictures</Nav.Link></Button>
+					<Button className="m-2"><Nav.Link href="#Log In">Log In</Nav.Link></Button>
+					<Button className="m-2"><Nav.Link href="#About Us">About Us</Nav.Link></Button>
 				</Nav>
 			</Navbar.Collapse>
 		</Navbar>
@@ -78,12 +78,12 @@ export function ProfilePage () {
 	<Container fluid className="py-5">
 
 		<Row className="d-flex justify-content-around">
-			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
+			<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
+			<Image src="kevin-picture.png" alt="this is a box of mac and cheese"/>
+			<Image src="matt-pic.png" alt="this is a box of mac and cheese"/>
+			<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
+			<Image src="kevin-picture.png" alt="this is a box of mac and cheese"/>
+			<Image src="matt-pic.png" alt="this is a box of mac and cheese"/>
 		</Row>
 
 		<Row className="d-flex justify-content-around pt-5" >

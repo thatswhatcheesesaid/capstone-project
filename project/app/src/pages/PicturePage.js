@@ -69,10 +69,10 @@ export function PicturePage() {
 		<Container fluid>
 			<h1 className="display-3 text-center py-4" style={{ color: 'rgb(167, 169, 190)'}}>Top 5</h1>
 			<Row className="justify-content-around">
-				<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-				<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-				<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-				<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
+				<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
+				<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
+				<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
+				<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
 				<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
 			</Row>
 		</Container>
