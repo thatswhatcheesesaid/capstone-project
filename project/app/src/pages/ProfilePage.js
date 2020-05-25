@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
-import Jumbotron from 'react-bootstrap/Jumbotron'
+// import Jumbotron from 'react-bootstrap/Jumbotron'
 import Image from 'react-bootstrap/Image'
 
 export function ProfilePage () {
@@ -57,16 +57,22 @@ export function ProfilePage () {
 <main style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
 
 {/*This is the jumbotron*/}
-	<Jumbotron style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
-		<h1 className="my-3" style={{ color: 'rgb(167, 169, 190)'}}>Profile</h1>
+	<Container fluid>
+		<h1 className="py-3 display-1" style={{ color: 'rgb(167, 169, 190)'}}>Profile</h1>
 			<Button variant="flat" className="mx-2">Upload your photo</Button>
 			<Button variant="flat" className="mx-2">Reset Password</Button>
-	</Jumbotron>
+	</Container>
 
+
+{/*This is the title*/}
+	<Container fluid>
+		<h1 className="display-3" style={{ color: 'rgb(167, 169, 190)'}}>Your Mac and Cheese Pictures</h1>
+	</Container>
 {/*This is where the pictures live*/}
-	<Container>
+	<Container fluid className="py-5">
 
 		<Row className="d-flex justify-content-around">
+			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
 			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
 			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
 			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
@@ -74,7 +80,8 @@ export function ProfilePage () {
 			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
 		</Row>
 
-		<Row className="d-flex justify-content-around">
+		<Row className="d-flex justify-content-around pt-5" >
+			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
 			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
 			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
 			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
