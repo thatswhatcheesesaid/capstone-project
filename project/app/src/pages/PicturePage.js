@@ -37,7 +37,7 @@ export function PicturePage() {
 			</Navbar.Brand>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav"/>
 			<Navbar.Collapse id="responsive-navbar-nav">
-				<Nav className="ml-auto text-danger">
+				<Nav className="ml-auto">
 					{/*<Nav.Link href="#">Restaurants</Nav.Link>*/}
 					{/*<Nav.Link href="#Pictures">Pictures</Nav.Link>*/}
 					{/*<Nav.Link href="#Log In">Log In</Nav.Link>*/}
@@ -51,10 +51,12 @@ export function PicturePage() {
 		</Navbar>
 	</Container>
 
+
+{/*This is the body of the page*/}
 <main style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
 
 {/*This is the title*/}
-		<Container fluid className="text-center text-light py-5">
+		<Container fluid className="text-center py-5">
 			<h1 className="display-1" style={{ color: 'rgb(167, 169, 190)'}}>Mac and Cheese</h1>
 		</Container>
 
@@ -71,7 +73,7 @@ export function PicturePage() {
 		</Container>
 
 {/*This is the voting*/}
-	<Container fluid className="text-light">
+	<Container fluid>
 		<h1 className="display-3 text-center py-4" style={{ color: 'rgb(167, 169, 190)'}}>Vote Here</h1>
 		<Row className="justify-content-center">
 			<Col className="pr-5 text-center">
@@ -116,5 +118,6 @@ export function PicturePage() {
 			</Col>
 		</Row>
 	</Container>
+
 		</>
 	)}
