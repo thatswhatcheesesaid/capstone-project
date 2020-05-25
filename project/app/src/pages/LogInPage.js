@@ -3,10 +3,14 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 export function LogInPage() {
 return(
 <>
+
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
 	<Navbar.Brand href='#home'>That's What Cheese Said</Navbar.Brand>
 <Navbar.Toggle aria-controls='responsive-navbar-nav' />
@@ -19,7 +23,9 @@ return(
 </Nav>
 </Navbar.Collapse>
 </Navbar>
-
+<Container>
+	<Row>
+		<Col>
 <h1>Create a new account</h1>
 <Form>
 	<Form.Group controlId="username">
@@ -50,8 +56,12 @@ return(
 	<Button variant="primary" type="submit">
 		Submit
 	</Button>
+	<Button variant="primary" type="submit">
+		Captcha
+	</Button>
 </Form>
-
+		</Col>
+	<Col>
 <h1>Log in</h1>
 <Form>
 	<Form.Group controlId="formBasicEmail"></Form.Group>
@@ -69,10 +79,11 @@ return(
 	</Button>
 
 	<Button variant="primary" type="submit">
-		Captcha
+		Forgot password?
 	</Button>
-
 </Form>
-
-	</>
+	</Col>
+	</Row>
+</Container>
+</>
 	)}
