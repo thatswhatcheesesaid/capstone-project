@@ -31,20 +31,27 @@ export function PicturePage() {
 
 {/*This is the navbar*/}
 	<Container fluid className="px-0" style={{ backgroundColor: 'rgb(255, 137, 6)' }}>
-		<Navbar>
-			<Navbar.Brand className="display-1">
-				<span style={{fontSize: 48}}>That's What Cheese Said</span>
+		<Navbar collapseOnSelect expand="lg">
+			<Navbar.Brand>
+				<span style={{fontSize: 37}}>That's What Cheese Said</span>
 			</Navbar.Brand>
-			<Nav className="ml-auto">
-				<Button className="mx-3"><Nav.Link href="#">Restaurants</Nav.Link></Button>
-				<Button classnName="mx-3"><Nav.Link href="#Pictures">Pictures</Nav.Link></Button>
-				<Button className="mx-3"><Nav.Link href="#Log In">Log In</Nav.Link></Button>
-				<Button className="mx-3"><Nav.Link href="#About Us">About Us</Nav.Link></Button>
-		</Nav>
+			<Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+			<Navbar.Collapse id="responsive-navbar-nav">
+				<Nav className="ml-auto text-danger">
+					{/*<Nav.Link href="#">Restaurants</Nav.Link>*/}
+					{/*<Nav.Link href="#Pictures">Pictures</Nav.Link>*/}
+					{/*<Nav.Link href="#Log In">Log In</Nav.Link>*/}
+					{/*<Nav.Link href="#About Us">About Us</Nav.Link>*/}
+					<Button className="mx-3 " ><Nav.Link href="#">Restaurants</Nav.Link></Button>
+					<Button classnName="mx-3"><Nav.Link href="#Pictures">Pictures</Nav.Link></Button>
+					<Button className="mx-3"><Nav.Link href="#Log In">Log In</Nav.Link></Button>
+					<Button className="mr-3"><Nav.Link href="#About Us">About Us</Nav.Link></Button>
+				</Nav>
+		</Navbar.Collapse>
 		</Navbar>
 	</Container>
 
-<main style={{ backgroundColor: "black" }}>
+<main style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
 
 {/*This is the title*/}
 		<Container fluid className="text-center text-light py-5">
