@@ -9,6 +9,12 @@ import Button from 'react-bootstrap/Button'
 // import Jumbotron from 'react-bootstrap/Jumbotron'
 import Image from 'react-bootstrap/Image'
 
+
+//**Here is the inline styling for text and background
+//style={{ backgroundColor: 'rgb(255, 137, 6)' }} This is the navbar and footer
+//style={{ backgroundColor: 'rgb(15, 14, 23)' }} This is for the body
+//style={{ color: 'rgb(167, 169, 190)'}} This is for the text
+
 export function ProfilePage () {
 
 	return (
