@@ -42,6 +42,9 @@ export const RestaurantPage = () => {
             </Col>
           </Row>
         </Container>
+
+        {/* Restaurant Ranking List */}
+
         <Container className="py-3 text-white">
           <Card className="my-3 border-0 bg-transparent">
             <Row fluid>
@@ -303,6 +306,9 @@ export const RestaurantPage = () => {
             </Row>
           </Card>
         </Container>
+
+        {/* Submit Button routes to About Me Page */}
+
         <Container className="py-3 text-white">
           <Row>
             <Col className="text-center">
@@ -311,6 +317,8 @@ export const RestaurantPage = () => {
             </Col>
           </Row>
         </Container>
+
+        {/* Footer */}
 
         <Container fluid className= "py-3" style={{ backgroundColor: 'rgb(255, 137, 6)' }}>
           <Row>
