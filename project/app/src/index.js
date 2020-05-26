@@ -5,14 +5,14 @@ import {BrowserRouter} from "react-router-dom";
 import {Route, Switch} from "react-router";
 import {FourOhFour} from "./pages/FourOhFour";
 import {Home} from "./pages/Home";
-import {LogInPage} from "./pages/LogInPage";
+import {AboutUsPage} from "./pages/AboutUsPage";
 
 
 const Routing = () => (
   <>
     <BrowserRouter>
       <Switch>
-         <Route exact path="/" component={LogInPage}/>
+         <Route exact path="/" component={AboutUsPage}/>
         <Route component={Home}/>
         <Route component={FourOhFour}/>
       </Switch>
