@@ -31,6 +31,55 @@ export const LandingPage = () => {
             </Navbar.Collapse>
           </Navbar>
         </Container>
+
+        {/* Ranking Lists */}
+
+        {/*
+          <table className="table table-borderless text-white text-center" style={{ tableLayout: 'fixed' }}>
+            <thead className="mb-3">
+            <tr className="py-5">
+              <th scope="col" className="py-5"><h1>Restaurants</h1></th>
+              <th scope="col" className="py-5"><h1>Cheesiest User Photos</h1></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>
+                <Card className="border-0 bg-transparent">
+                  <Col md={3}>
+                    <Card.Body>
+                      <Card.Title><h3>#1 Restaurant</h3></Card.Title>
+                      <Card.Text>Restaurant name</Card.Text>
+                    </Card.Body>
+                  </Col>
+                  <Col md={3}>
+                    <Image src="blue-box.jpg" alt="Blue Box Mac" width={200} fluid />
+                  </Col>
+                </Card>
+              </td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>@twitter</td>
+              <td>asdfjkl;</td>
+            </tr>
+            </tbody>
+          </table>
+*/}
+
+        <Container className="d-inline">
+          <Row>
+            <Col md={6}><h1>Restaurants</h1></Col>
+            <Col md={6}><h1>Restaurants</h1></Col>
+          </Row>
+        </Container>
+        <Container className="d-inline">
+          <h1>Cheesiest Photos of the Week</h1>
+        </Container>
       </main>
     </>
   )
