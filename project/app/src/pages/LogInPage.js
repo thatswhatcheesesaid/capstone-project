@@ -12,22 +12,34 @@ import Image from 'react-bootstrap/Image'
 export function LogInPage() {
 	return (
 		<>
+			{/* This is the Navbar */}
 
-			<Navbar collapseOnSelect expand="lg"  variant="dark" style={{ backgroundColor: 'rgb(255, 137, 6)' }}>
-				<Navbar.Brand href='#home'>That's What Cheese Said</Navbar.Brand>
-				<Navbar.Toggle aria-controls='responsive-navbar-nav'/>
-				<Navbar.Collapse id='responsive-navbar-nav'>
-					<Nav className='ml-auto'>
-						<Button><Nav.Link href='#restaurants'>Restaurants</Nav.Link></Button>
-						<Button><Nav.Link href='#pictures'>Pictures</Nav.Link></Button>
-						<Button><Nav.Link href='#logIn'>Log In</Nav.Link></Button>
-						<Button><Nav.Link href='#newUser'>New User</Nav.Link></Button>
-					</Nav>
-				</Navbar.Collapse>
-			</Navbar>
-			<Container>
+			<Container fluid className="px-0" style={{ backgroundColor: 'rgb(255, 137, 6)' }}>
+				<Navbar collapseOnSelect expand="lg">
+					<Navbar.Brand>
+						<span style={{fontSize: 37}}>That's What Cheese Said</span>
+					</Navbar.Brand>
+					<Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+					<Navbar.Collapse id="responsive-navbar-nav">
+						<Nav className="ml-auto">
+							{/*<Nav.Link href="#">Restaurants</Nav.Link>*/}
+							{/*<Nav.Link href="#Pictures">Pictures</Nav.Link>*/}
+							{/*<Nav.Link href="#Log In">Log In</Nav.Link>*/}
+							{/*<Nav.Link href="#About Us">About Us</Nav.Link>*/}
+							<Button className="mx-3"><Nav.Link href="#">Restaurants</Nav.Link></Button>
+							<Button className="mx-3"><Nav.Link href="#Pictures">Pictures</Nav.Link></Button>
+							<Button className="mx-3"><Nav.Link href="#Log In">Log In</Nav.Link></Button>
+							<Button className="mx-3"><Nav.Link href="#About Us">About Us</Nav.Link></Button>
+						</Nav>
+					</Navbar.Collapse>
+				</Navbar>
+
+				{/* These are log in and new user forms */}
+
+			</Container>
+			<Container fluid style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
 				<Row>
-					<Col>
+					<Col style={{ color: 'rgb(167, 169, 190)'}}>
 						<h1>Create a new account</h1>
 						<Form>
 							<Form.Group controlId="username">
@@ -63,7 +75,7 @@ export function LogInPage() {
 							</Button>
 						</Form>
 					</Col>
-					<Col>
+					<Col style={{ color: 'rgb(167, 169, 190)'}}>
 						<h1>Log in</h1>
 						<Form>
 							<Form.Group controlId="formBasicEmail"></Form.Group>
@@ -84,10 +96,19 @@ export function LogInPage() {
 								Forgot password?
 							</Button>
 						</Form>
-						<Image src='BlueBox.jpg' width={300} rounded/>
+						<Image className={'py-3'} src='BlueBox.jpg' width={300} rounded/>
 					</Col>
 				</Row>
 			</Container>
-			<footer>Copy right info</footer>
+
+			{/* This is the Footer */}
+
+			<Container fluid className= "py-3" style={{ backgroundColor: 'rgb(255, 137, 6)' }}>
+				<Row>
+					<Col>
+						<p className="text-center">Copyright info</p>
+					</Col>
+				</Row>
+			</Container>
 		</>
 	)}
