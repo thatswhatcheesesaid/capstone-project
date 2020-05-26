@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
-import Image from 'react-bootstrap/Image'
+// import Image from 'react-bootstrap/Image'
 import Form from 'react-bootstrap/Form'
 
 export function ResetPage () {
@@ -31,7 +31,7 @@ export function ResetPage () {
 	</Container>
 
 
-	<main style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
+	<main style={{ backgroundColor: 'rgb(15, 14, 23)' }} className="py-5">
 
 {/*This is the header*/}
 		<Container fluid>
@@ -41,22 +41,22 @@ export function ResetPage () {
 {/*This is the reset form*/}
 	<Container fluid>
 		<Row>
-			<Col>
+			<Col className="py-5">
 		<Form fluid>
 
 			<Form.Group controlId="formBasicPassword">
 				<Form.Label>Old Password</Form.Label>
-				<Form.Control type="password" placeholder="Password" />
+				<Form.Control type="password" placeholder="Old Password" />
 			</Form.Group>
 
 			<Form.Group controlId="formBasicPassword">
 				<Form.Label>New Password</Form.Label>
-				<Form.Control type="password" placeholder="Password" />
+				<Form.Control type="password" placeholder="New Password" />
 			</Form.Group>
 
 			<Form.Group controlId="formBasicPassword">
-				<Form.Label>New Password</Form.Label>
-				<Form.Control type="password" placeholder="Password" />
+				<Form.Label>Confirm Password</Form.Label>
+				<Form.Control type="password" placeholder="Confirm Password" />
 			</Form.Group>
 
 			<Button variant="primary" type="submit">
@@ -66,9 +66,11 @@ export function ResetPage () {
 
 			</Col>
 			<Col>
-				<Image src="blue-box.jpg" alt="this is a box of mac and cheese"/>
+
 			</Col>
 		</Row>
+
+		<Row></Row>
 	</Container>
 	</main>
 
