@@ -71,14 +71,11 @@ export const LandingPage = () => {
           </table>
 */}
 
-        <Container className="d-inline">
+        <Container className="text-center">
           <Row>
-            <Col md={6}><h1>Restaurants</h1></Col>
-            <Col md={6}><h1>Restaurants</h1></Col>
+            <Col><h1>Restaurants</h1></Col>
+            <Col><h1>Cheesiest Photos</h1></Col>
           </Row>
-        </Container>
-        <Container className="d-inline">
-          <h1>Cheesiest Photos of the Week</h1>
         </Container>
       </main>
     </>
