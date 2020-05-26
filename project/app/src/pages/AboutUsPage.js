@@ -29,7 +29,7 @@ export function AboutUsPage() {
 </Navbar.Collapse>
 </Navbar>
 </Container>
-<Container>
+<Container fluid className="text-center py-5">
 	<Row>
 		<Col>
 			<h1>About Us</h1>
@@ -42,27 +42,20 @@ export function AboutUsPage() {
 				biscuits. Parmesan emmental cheese and wine port-salut airedale manchego.</p>
 		</Col>
 	</Row>
+	<h1>Contact</h1>
 	<Row>
-			<h1>Contact</h1>
 		<Col>
 			<Form>
 				<Form.Group controlId="name">
-					<Form.Label>Name</Form.Label>
 					<Form.Control type="name" placeholder="Your name"/>
 				</Form.Group>
 
 				<Form.Group controlId="email">
-					<Form.Label>Email address</Form.Label>
 					<Form.Control type="email" placeholder="Your email"/>
 				</Form.Group>
 
 				<Form.Group controlId="phone">
-					<Form.Label>Phone</Form.Label>
 					<Form.Control type="password" placeholder="Your phone number"/>
-				</Form.Group>
-				<Form.Group controlId="newPasswordConformation">
-					<Form.Label>Confirm password:</Form.Label>
-					<Form.Control type="password" placeholder="Retype password"/>
 				</Form.Group>
 
 				<Dropdown>
@@ -84,6 +77,16 @@ export function AboutUsPage() {
 					<Form.Control as="textarea" rows="3" />
 				</Form.Group>
 </Col>
+	</Row>
+	<Row fluid>
+			<Button variant="primary" type="captcha">
+				Captcha
+			</Button>
+	</Row>
+	<Row fluid>
+		<Button variant="primary" type="submit">
+			Submit
+		</Button>
 	</Row>
 </Container>
 
