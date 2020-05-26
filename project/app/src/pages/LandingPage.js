@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import Card from 'react-bootstrap/Card'
+import CardDeck from 'react-bootstrap/CardDeck'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
@@ -70,14 +71,131 @@ export const LandingPage = () => {
             </tbody>
           </table>
 */}
-
+        {/*
         <Container className="text-center">
           <Row>
             <Col><h1>Restaurants</h1></Col>
             <Col><h1>Cheesiest Photos</h1></Col>
           </Row>
+        </Container>*/}
+
+
+        <Container className="text-center my-5">
+          <Row>
+            <Col className="display-1">That's What Cheese Said</Col>
+          </Row>
+        </Container>
+        <Container className="my-5">
+          <Row>
+            <Col className="text-center"><h2><u>Top Restaurants</u></h2></Col>
+          </Row>
+        </Container>
+        <Container fluid>
+          <CardDeck className="text-center pb-5">
+            <Card className="border-0 bg-transparent">
+              <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
+              <Card.Body>
+                <Card.Title><h3>#1 Restaurant</h3></Card.Title>
+                <Card.Text><p>Restaurant Name</p><p>Score</p></Card.Text>
+              </Card.Body>
+            </Card>
+            <Card className="border-0 bg-transparent">
+              <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
+              <Card.Body>
+                <Card.Title><h3>#2 Restaurant</h3></Card.Title>
+                <Card.Text><p>Restaurant Name</p><p>Score</p></Card.Text>
+              </Card.Body>
+            </Card>
+            <Card className="border-0 bg-transparent">
+              <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
+              <Card.Body>
+                <Card.Title><h3>#3 Restaurant</h3></Card.Title>
+                <Card.Text><p>Restaurant Name</p><p>Score</p></Card.Text>
+              </Card.Body>
+            </Card>
+            <Card className="border-0 bg-transparent">
+              <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
+              <Card.Body>
+                <Card.Title><h3>#4 Restaurant</h3></Card.Title>
+                <Card.Text><p>Restaurant Name</p><p>Score</p></Card.Text>
+              </Card.Body>
+            </Card>
+            <Card className="border-0 bg-transparent">
+              <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
+              <Card.Body>
+                <Card.Title><h3>#5 Restaurant</h3></Card.Title>
+                <Card.Text><p>Restaurant Name</p><p>Score</p></Card.Text>
+              </Card.Body>
+            </Card>
+          </CardDeck>
+        </Container>
+
+        <Container className="my-5">
+          <Row>
+            <Col className="text-center"><h2><u>Cheesiest Pictures of your Life</u></h2></Col>
+          </Row>
+        </Container>
+        <Container fluid>
+          <CardDeck className="text-center pb-5">
+            <Card className="border-0 bg-transparent">
+              <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
+              <Card.Body>
+                <Card.Title><h3>#1 Picture</h3></Card.Title>
+                <Card.Text><p>User/Restaurant Name</p><p>Score</p></Card.Text>
+              </Card.Body>
+            </Card>
+            <Card className="border-0 bg-transparent">
+              <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
+              <Card.Body>
+                <Card.Title><h3>#2 Picture</h3></Card.Title>
+                <Card.Text><p>User/Restaurant Name</p><p>Score</p></Card.Text>
+              </Card.Body>
+            </Card>
+            <Card className="border-0 bg-transparent">
+              <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
+              <Card.Body>
+                <Card.Title><h3>#3 Picture</h3></Card.Title>
+                <Card.Text><p>User/Restaurant Name</p><p>Score</p></Card.Text>
+              </Card.Body>
+            </Card>
+            <Card className="border-0 bg-transparent">
+              <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
+              <Card.Body>
+                <Card.Title><h3>#4 Picture</h3></Card.Title>
+                <Card.Text><p>User/Restaurant Name</p><p>Score</p></Card.Text>
+              </Card.Body>
+            </Card>
+            <Card className="border-0 bg-transparent">
+              <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
+              <Card.Body>
+                <Card.Title><h3>#5 Picture</h3></Card.Title>
+                <Card.Text><p>User/Restaurant Name</p><p>Score</p></Card.Text>
+              </Card.Body>
+            </Card>
+          </CardDeck>
+        </Container>
+        <Container className="pb-5">
+          <Row>
+            <Col className="text-center">
+              <Button className="mb-5">Rank the Best Restaurants Now!</Button>
+              <p>Did we miss the best Mac in ABQ? <br></br><a href="#">Click Here</a> to submit a new Restaurant!</p>
+            </Col>
+            <Col className="text-center">
+              <Button className="mb-5">Vote for the Cheesiest Pic Now!</Button>
+              <p>How Cheesy is your Mac?<br></br><a href="#">Post a pic</a> and put it up against<br></br> the rest!</p>
+            </Col>
+          </Row>
+        </Container>
+        <Container fluid className= "py-3" style={{ backgroundColor: 'rgb(255, 137, 6)' }}>
+          <Row>
+            <Col>
+              <p className="text-center">Copyright info</p>
+            </Col>
+          </Row>
         </Container>
       </main>
+
+
     </>
   )
 }
