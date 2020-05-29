@@ -78,22 +78,22 @@ export function ProfilePage () {
 
 		<Row className="d-flex justify-content-around">
 			<Col xs={6} md={4} lg={2}>
-				<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
+				<Image fluid src="carl-pic.png" alt="this is a box of mac and cheese" width={200}/>
 			</Col>
 			<Col xs={6} md={4} lg={2}>
-				<Image src="kevin-picture.png" alt="this is a box of mac and cheese"/>
+				<Image fluid src="kevin-picture.png" alt="this is a box of mac and cheese"width={200}/>
 			</Col>
 			<Col xs={6} md={4} lg={2}>
-				<Image src="matt-pic.png" alt="this is a box of mac and cheese"/>
+				<Image fluid src="matt-pic.png" alt="this is a box of mac and cheese"width={200}/>
 			</Col>
 			<Col xs={6} md={4} lg={2}>
-				<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
+				<Image fluid src="carl-pic.png" alt="this is a box of mac and cheese"width={200}/>
 			</Col>
 			<Col xs={6} md={4} lg={2}>
-				<Image src="kevin-picture.png" alt="this is a box of mac and cheese"/>
+				<Image fluid src="kevin-picture.png" alt="this is a box of mac and cheese"width={200}/>
 			</Col>
 			<Col xs={6} md={4} lg={2}>
-				<Image src="matt-pic.png" alt="this is a box of mac and cheese"/>
+				<Image fluid src="matt-pic.png" alt="this is a box of mac and cheese"width={200}/>
 			</Col>
 			{/*<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>*/}
 			{/*<Image src="kevin-picture.png" alt="this is a box of mac and cheese"/>*/}
@@ -104,12 +104,24 @@ export function ProfilePage () {
 		</Row>
 
 		<Row className="d-flex justify-content-around pt-5" >
-			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
+			<Col xs={6} md={4} lg={2}>
+				<Image fluid src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
+			</Col>
+			<Col xs={6} md={4} lg={2}>
+				<Image fluid src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
+			</Col>
+			<Col xs={6} md={4} lg={2}>
+			<Image fluid src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
+			</Col>
+			<Col xs={6} md={4} lg={2}>
+			<Image fluid src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
+			</Col>
+			<Col xs={6} md={4} lg={2}>
+			<Image fluid src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
+			</Col>
+			<Col xs={6} md={4} lg={2}>
+			<Image fluid src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
+			</Col>
 		</Row>
 
 	</Container>
