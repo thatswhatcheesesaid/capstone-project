@@ -77,12 +77,30 @@ export function ProfilePage () {
 	<Container fluid className="py-5">
 
 		<Row className="d-flex justify-content-around">
-			<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
-			<Image src="kevin-picture.png" alt="this is a box of mac and cheese"/>
-			<Image src="matt-pic.png" alt="this is a box of mac and cheese"/>
-			<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
-			<Image src="kevin-picture.png" alt="this is a box of mac and cheese"/>
-			<Image src="matt-pic.png" alt="this is a box of mac and cheese"/>
+			<Col xs={6} md={4} lg={2}>
+				<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
+			</Col>
+			<Col xs={6} md={4} lg={2}>
+				<Image src="kevin-picture.png" alt="this is a box of mac and cheese"/>
+			</Col>
+			<Col xs={6} md={4} lg={2}>
+				<Image src="matt-pic.png" alt="this is a box of mac and cheese"/>
+			</Col>
+			<Col xs={6} md={4} lg={2}>
+				<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
+			</Col>
+			<Col xs={6} md={4} lg={2}>
+				<Image src="kevin-picture.png" alt="this is a box of mac and cheese"/>
+			</Col>
+			<Col xs={6} md={4} lg={2}>
+				<Image src="matt-pic.png" alt="this is a box of mac and cheese"/>
+			</Col>
+			{/*<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>*/}
+			{/*<Image src="kevin-picture.png" alt="this is a box of mac and cheese"/>*/}
+			{/*<Image src="matt-pic.png" alt="this is a box of mac and cheese"/>*/}
+			{/*<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>*/}
+			{/*<Image src="kevin-picture.png" alt="this is a box of mac and cheese"/>*/}
+			{/*<Image src="matt-pic.png" alt="this is a box of mac and cheese"/>*/}
 		</Row>
 
 		<Row className="d-flex justify-content-around pt-5" >
