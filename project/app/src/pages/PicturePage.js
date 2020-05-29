@@ -66,14 +66,24 @@ export function PicturePage() {
 		</Container>
 
 {/*This is the top 5 pics*/}
-		<Container fluid>
+		<Container fluid className="text-center">
 			<h1 className="display-3 text-center py-4" style={{ color: 'rgb(167, 169, 190)'}}>Top 5</h1>
 			<Row className="justify-content-around">
-				<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
-				<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
-				<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
-				<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>
-				<Image src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
+				<Col  md={2}>
+					<Image fluid src="carl-pic.png" alt="this is a box of mac and cheese" width={200}/>
+				</Col>
+				<Col xs={6} md={2}>
+					<Image fluid src="carl-pic.png" alt="this is a box of mac and cheese" width={200}/>
+				</Col>
+				<Col xs={6} md={2}>
+					<Image fluid src="carl-pic.png" alt="this is a box of mac and cheese" width={200}/>
+				</Col>
+				<Col xs={6} md={2}>
+					<Image fluid src="carl-pic.png" alt="this is a box of mac and cheese" width={200}/>
+				</Col>
+				<Col xs={6} md={2}>
+					<Image fluid src="carl-pic.png" alt="this is a box of mac and cheese" width={200}/>
+				</Col>
 			</Row>
 		</Container>
 
@@ -82,12 +92,12 @@ export function PicturePage() {
 		<h1 className="display-3 text-center py-4" style={{ color: 'rgb(167, 169, 190)'}}>Vote Here</h1>
 		<Row className="justify-content-center">
 			<Col className="pr-5 text-center">
-				<Image src="blue-box-500px.png" alt="this is a box of mac and cheese"/>
+				<Image fluid src="blue-box-500px.png" alt="this is a box of mac and cheese"/>
 				<p style={{ color: 'rgb(167, 169, 190)'}}>This is the name of the restaurant</p>
 				<Button variant='flat'><strong>Cheesey</strong></Button>
 			</Col>
 			<Col className="pl-5 text-center">
-				<Image src="blue-box-500px.png" alt="this is a box of mac and cheese"/>
+				<Image fluid src="blue-box-500px.png" alt="this is a box of mac and cheese"/>
 				<p style={{ color: 'rgb(167, 169, 190)'}}>This is the name of the restaurant</p>
 				<Button variant='flat'><strong>Cheesey</strong></Button>
 			</Col>
