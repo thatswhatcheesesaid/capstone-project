@@ -14,7 +14,7 @@ export const LandingPage = () => {
 
         {/* Page Title */}
 
-        <Container className="text-center my-5">
+        <Container className="text-center py-5">
           <Row>
             <Col className="display-1">That's What Cheese Said</Col>
           </Row>
