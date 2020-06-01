@@ -47,10 +47,10 @@ export function PicturePage() {
 					{/*<Nav.Link href="#Pictures">Pictures</Nav.Link>*/}
 					{/*<Nav.Link href="#Log In">Log In</Nav.Link>*/}
 					{/*<Nav.Link href="#About Us">About Us</Nav.Link>*/}
-					<Button className="mx-3"><Nav.Link href="#">Restaurants</Nav.Link></Button>
-					<Button className="mx-3"><Nav.Link href="#Pictures">Pictures</Nav.Link></Button>
-					<Button className="mx-3"><Nav.Link href="#Log In">Log In</Nav.Link></Button>
-					<Button className="mx-3"><Nav.Link href="#About Us">About Us</Nav.Link></Button>
+					<Button className="m-2"><Nav.Link href="#">Restaurants</Nav.Link></Button>
+					<Button className="m-2"><Nav.Link href="#Pictures">Pictures</Nav.Link></Button>
+					<Button className="m-2"><Nav.Link href="#Log In">Log In</Nav.Link></Button>
+					<Button className="m-2"><Nav.Link href="#About Us">About Us</Nav.Link></Button>
 				</Nav>
 		</Navbar.Collapse>
 		</Navbar>
