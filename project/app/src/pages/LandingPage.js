@@ -12,25 +12,6 @@ export const LandingPage = () => {
     <>
       <main style={{ backgroundColor: 'black' }} className="text-white">
 
-        {/* Navbar */}
-
-        <Container fluid className="px-0" style={{ backgroundColor: 'rgb(255, 137, 6)' }}>
-          <Navbar collapseOnSelect expand="lg">
-            <Navbar.Brand>
-              <span style={{fontSize: 37}}>That's What Cheese Said</span>
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="ml-auto">
-                <Button className="m-2"><Nav.Link href="#">Restaurants</Nav.Link></Button>
-                <Button className="m-2"><Nav.Link href="#Pictures">Pictures</Nav.Link></Button>
-                <Button className="m-2"><Nav.Link href="#Log In">Log In</Nav.Link></Button>
-                <Button className="m-2"><Nav.Link href="#About Us">About Us</Nav.Link></Button>
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar>
-        </Container>
-
         {/* Page Title */}
 
         <Container className="text-center my-5">
