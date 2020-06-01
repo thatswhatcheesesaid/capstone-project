@@ -8,13 +8,19 @@ import {Home} from "./pages/Home";
 import { Footer } from './pages/Footer';
 import {LandingPage} from './pages/LandingPage'
 import {ProfilePage} from './pages/ProfilePage'
-
+import {StaticNavbar} from './pages/StaticNavbar'
 
 
 const Routing = () => (
   <>
+
+    <React.StrictMode>
+      <StaticNavbar/>
+    </React.StrictMode>
+
     <BrowserRouter>
       <Switch>
+
         <Route exact path="/" component={LandingPage}/>
         <Route exact path="/profile" component={ProfilePage}/>
         <Route component={Home}/>
@@ -22,9 +28,11 @@ const Routing = () => (
       </Switch>
     </BrowserRouter>
 
+
     <React.StrictMode>
       <Footer/>
     </React.StrictMode>
+
 
   </>
 );
