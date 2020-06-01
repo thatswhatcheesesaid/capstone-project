@@ -77,7 +77,7 @@ export function AboutUsPage() {
 
 					<Col style={{color: 'rgb(167, 169, 190)'}}>
 						<textarea className="form-control" id="message" placeholder="Your Message" name="message"
-									 rows="5"> Your message</textarea>
+									 rows="5">Your message</textarea>
 					</Col>
 				</Row>
 
