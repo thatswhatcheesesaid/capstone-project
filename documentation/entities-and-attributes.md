@@ -10,10 +10,11 @@
 
 ###restaurant (strong entity)
 1. restaurantId (primary key)
-2. restaurantAddress
-3. restaurantDescription
-4. restaurantFeaturedPic
+2. restaurantDescription
+3. restaurantFeaturedPic
+4. restaurantGoogleLink
 5. restaurantName
+6. restaurantSocialMedia
 
 ###fork (weak entity)
 1. forkProfileId (foreign key)
@@ -24,7 +25,8 @@
 1. foodpicId (primary key)
 2. foodpicProfileId (foreign key)
 3. foodpicRestaurantId (foreign key)
-4. foodpicPicture
+4. foodpicCaption
+5. foodpicPicture
 
 ###cheesey (weak entity)
 1. cheeseyFoodpicId (foreign key)
