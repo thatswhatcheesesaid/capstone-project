@@ -7,12 +7,16 @@ import {FourOhFour} from "./pages/FourOhFour";
 import {Home} from "./pages/Home";
 import { Footer } from './pages/Footer';
 import {LandingPage} from './pages/LandingPage'
+import {ProfilePage} from './pages/ProfilePage'
+
+
 
 const Routing = () => (
   <>
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={LandingPage}/>
+        <Route exact path="/profile" component={ProfilePage}/>
         <Route component={Home}/>
         <Route component={FourOhFour}/>
       </Switch>
