@@ -5,18 +5,22 @@ import {BrowserRouter} from "react-router-dom";
 import {Route, Switch} from "react-router";
 import {FourOhFour} from "./pages/FourOhFour";
 import {Home} from "./pages/Home";
-import { PicturePage } from './pages/PicturePage'
+import { Footer } from './pages/Footer'
 
 
 const Routing = () => (
   <>
     <BrowserRouter>
       <Switch>
-        <Route component={PicturePage}/>
         <Route component={Home}/>
         <Route component={FourOhFour}/>
       </Switch>
     </BrowserRouter>
+
+    <React.StrictMode>
+      <Footer/>
+    </React.StrictMode>
+
   </>
 );
 ReactDOM.render(<Routing/>, document.querySelector('#root'));
