@@ -5,17 +5,16 @@ import {BrowserRouter} from "react-router-dom";
 import {Route, Switch} from "react-router";
 import {FourOhFour} from "./pages/FourOhFour";
 import {Home} from "./pages/Home";
-import { Footer } from './pages/Footer'
-
-
+import { Footer } from './pages/Footer';
+import {LandingPage} from './pages/LandingPage'
 
 const Routing = () => (
   <>
     <BrowserRouter>
       <Switch>
+        <Route exact path="/" component={LandingPage}/>
         <Route component={Home}/>
         <Route component={FourOhFour}/>
-        <Route component={RestaurantPage}/>
       </Switch>
     </BrowserRouter>
 
