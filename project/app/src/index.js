@@ -9,7 +9,7 @@ import { Footer } from './pages/Footer';
 import {LandingPage} from './pages/LandingPage'
 import {ProfilePage} from './pages/ProfilePage'
 import {StaticNavbar} from './pages/StaticNavbar'
-
+import {RestaurantPage} from './pages/RestaurantPage'
 
 const Routing = () => (
   <>
@@ -23,6 +23,7 @@ const Routing = () => (
 
         <Route exact path="/" component={LandingPage}/>
         <Route exact path="/profile" component={ProfilePage}/>
+        <Route exact path="/restaurants" component={RestaurantPage}/>
         <Route component={Home}/>
         <Route component={FourOhFour}/>
       </Switch>
