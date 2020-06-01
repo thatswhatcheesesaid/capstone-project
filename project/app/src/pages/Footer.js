@@ -28,7 +28,7 @@ export function Footer() {
 	<Container fluid className= "py-3" style={{ backgroundColor: 'rgb(255, 137, 6)' }}>
 		<Row>
 			<Col>
-				<p className="text-center" id='target' style={{ color: 'rgb(167, 169, 190)'}}>Copyright © {getYear()}</p>
+				<p className="text-center" id='target'>Copyright © {getYear()}</p>
 			</Col>
 		</Row>
 	</Container>
