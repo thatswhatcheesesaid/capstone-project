@@ -166,15 +166,6 @@ export const LandingPage = () => {
           </Row>
         </Container>
 
-        {/* Footer */}
-
-        <Container fluid className= "py-3" style={{ backgroundColor: 'rgb(255, 137, 6)' }}>
-          <Row>
-            <Col>
-              <p className="text-center">Copyright info</p>
-            </Col>
-          </Row>
-        </Container>
       </main>
 
 
