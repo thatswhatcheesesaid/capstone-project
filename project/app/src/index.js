@@ -10,6 +10,9 @@ import {LandingPage} from './pages/LandingPage'
 import {ProfilePage} from './pages/ProfilePage'
 import {StaticNavbar} from './pages/StaticNavbar'
 import {RestaurantPage} from './pages/RestaurantPage'
+import {LogInPage} from "./pages/LogInPage";
+
+
 
 const Routing = () => (
   <>
@@ -20,10 +23,10 @@ const Routing = () => (
 
     <BrowserRouter>
       <Switch>
-
         <Route exact path="/" component={LandingPage}/>
         <Route exact path="/profile" component={ProfilePage}/>
         <Route exact path="/restaurants" component={RestaurantPage}/>
+        <Route exact path="/LogIn" component={LogInPage}/>
         <Route component={Home}/>
         <Route component={FourOhFour}/>
       </Switch>
