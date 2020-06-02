@@ -11,6 +11,8 @@ import {ProfilePage} from './pages/ProfilePage'
 import {StaticNavbar} from './pages/StaticNavbar'
 import {RestaurantPage} from './pages/RestaurantPage'
 import {LogInPage} from "./pages/LogInPage";
+import {AboutUsPage} from "./pages/AboutUsPage";
+
 
 
 
@@ -26,7 +28,8 @@ const Routing = () => (
         <Route exact path="/" component={LandingPage}/>
         <Route exact path="/profile" component={ProfilePage}/>
         <Route exact path="/restaurants" component={RestaurantPage}/>
-        <Route exact path="/LogIn" component={LogInPage}/>
+        <Route exact path="/logIn" component={LogInPage}/>
+        <Route exact path="/aboutUs" component={AboutUsPage}/>
         <Route component={Home}/>
         <Route component={FourOhFour}/>
       </Switch>
