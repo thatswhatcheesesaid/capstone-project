@@ -12,9 +12,7 @@ import {StaticNavbar} from './pages/StaticNavbar'
 import {RestaurantPage} from './pages/RestaurantPage'
 import {LogInPage} from "./pages/LogInPage";
 import {AboutUsPage} from "./pages/AboutUsPage";
-
-
-
+import {PicturePage} from './pages/PicturePage'
 
 const Routing = () => (
   <>
@@ -30,6 +28,7 @@ const Routing = () => (
         <Route exact path="/restaurants" component={RestaurantPage}/>
         <Route exact path="/logIn" component={LogInPage}/>
         <Route exact path="/aboutUs" component={AboutUsPage}/>
+        <Route exact path="/cheesey" component={PicturePage}/>
         <Route component={Home}/>
         <Route component={FourOhFour}/>
       </Switch>
