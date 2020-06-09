@@ -11,7 +11,7 @@
 ###restaurant (strong entity)
 1. restaurantId (primary key)
 2. restaurantFeaturedPic
-3. resaurantFeaturedPicCaption
+3. restaurantFeaturedPicCaption
 4. restaurantGoogleLink
 5. restaurantName
 6. restaurantSocialMedia
