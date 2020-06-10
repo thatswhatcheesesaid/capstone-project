@@ -17,7 +17,7 @@
 ####show restaurants with fork scores
 
 [use javascript to sort descending by forkScore]
-**selectRestaurantsByFork** select all forkScore from fork table and restaurant from restaurant talbe join on restaurant
+**selectRestaurantsByFork** select all forkScore from fork table and restaurant from restaurant table join on restaurant
 
 ####fork voting 
 
