@@ -16,7 +16,7 @@ create TABLE profile(
 
 create TABLE restaurant(
     restaurantId                 BINARY(16)   not null,
-    restaurantFeaturedPic        VARCHAR(140) not null,
+    restaurantFeaturedPic        VARCHAR(512) not null,
     restaurantFeaturedPicCaption VARCHAR(140) not null,
     restaurantGoogleLink         VARCHAR(140) not null,
     restaurantName               VARCHAR(140) not null,
@@ -28,7 +28,10 @@ create TABLE foodpic(
     foodpicId           BINARY(16)   not null,
     foodpicProfileId    BINARY(16)   not null,
     foodpicRestaurantId BINARY(16)   not null,
-    foodpicUrl          VARCHAR(140) not null,
+    foodpicCaption      VARCHAR (144) not null,
+    foodpicUrl          VARCHAR(255) not null,
+    index(foodpicProfileId),
+    index(foodpicRestaurantId),
     foreign key (foodpicProfileId) references profile (profileId),
     foreign key (foodpicRestaurantId) references restaurant (restaurantId),
     primary key (foodpicId)
