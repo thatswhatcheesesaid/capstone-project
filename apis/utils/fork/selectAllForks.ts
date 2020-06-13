@@ -1,12 +1,12 @@
 import {Fork} from "../interfaces/fork";
 import {connect} from "../../src/database";
 
-export async function selectAllForks(fork: Fork) {
+export async function selectAllForks() {
     try {
         const mySqlConnection = await connect()
         const mySqlQuery = "SELECT BIN_TO_UUID() AS forkProfileId, forkRestaurantId, forkScore FROM fork"
-        const [rows] = await mySqlConnection.execute(mySqlQuery, fork)
-        return "All Forks selected successfully"
+        const [rows] = await mySqlConnection.execute(mySqlQuery)
+        return rows
     } catch (error) {
         console.log(error)
     }
