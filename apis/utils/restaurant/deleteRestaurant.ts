@@ -1,7 +1,7 @@
 import {Restaurant} from "../interfaces/restaurant";
-import {connect} from "../..src/database";
+import {connect} from "../../src/database";
 
-export async function insertRestaurant(restaurant: Restaurant) {
+export async function deleteRestaurant(restaurant: string) {
     try {
         const mySqlConnection = await connect()
         const mySqlQuery ="DELETE FROM restaurant WHERE restaurantId = VALUES(UUID_TO_BIN(UUID())"
