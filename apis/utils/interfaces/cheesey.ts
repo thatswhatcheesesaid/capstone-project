@@ -1,5 +1,5 @@
 export interface Cheesey {
-    cheeseyProfileId: string | null,
+    cheeseyProfileId: string,
     cheeseyFoodPicId: string,
     cheeseyScore: number
 }
