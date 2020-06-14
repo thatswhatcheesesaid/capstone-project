@@ -2,11 +2,12 @@ import {NextFunction, Request, Response} from "express";
 import {Status} from "../../utils/interfaces/status";
 import {Fork} from "../../utils/interfaces/fork";
 import {insertForkScore} from "../../utils/fork/insertForkScore";
-import {selectAllForks} from "../../utils/fork/selectAllForks";
+import {selectForkByProfileIdAndRestaurantId} from "../../utils/fork/selectForkByProfileIdAndRestaurantId";
 
-export async function getAllForksController(request: Request, response: Response, nextFunction: NextFunction) {
+export async function getForkByProfileIdAndRestaurantIdController(request: Request, response: Response, nextFunction: NextFunction) {
     try {
-        const data = await selectAllForks()
+        const {profileId, restaurantId} = request.params
+        const data = await selectForkByProfileIdAndRestaurantId(profileId, restaurantId)
         const status: Status = {status: 200, data, message: null}
         return response.json(status)
     } catch (error) {

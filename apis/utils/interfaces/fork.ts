@@ -1,5 +1,5 @@
 export interface Fork {
-    forkProfileId: string | null,
+    forkProfileId: string,
     forkRestaurantId: string,
     forkScore: number
 }
