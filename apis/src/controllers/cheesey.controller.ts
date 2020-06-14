@@ -2,11 +2,12 @@ import {NextFunction, Request, Response} from "express";
 import {Status} from "../../utils/interfaces/status";
 import {Cheesey} from "../../utils/interfaces/cheesey";
 import {insertCheeseyScore} from "../../utils/cheesey/insertCheeseyScore";
-import {selectAllCheesey} from "../../utils/cheesey/selectAllCheesey";
+import {selectCheeseyByFoodpicIdAndProfileId} from "../../utils/cheesey/selectCheeseyByFoodpicIdAndProfileId";
 
-export async function getAllCheeseyController(request: Request, response: Response, nextFunction: NextFunction) {
+export async function getCheeseyByFoodpicIdAndProfileIdController(request: Request, response: Response, nextFunction: NextFunction) {
     try {
-        const data = await selectAllCheesey()
+        const {foodpicId, profileId} = request.params
+        const data = await selectCheeseyByFoodpicIdAndProfileId(foodpicId, profileId)
         const status: Status = {status: 200, data, message: null}
         return response.json(status)
     } catch (error) {
