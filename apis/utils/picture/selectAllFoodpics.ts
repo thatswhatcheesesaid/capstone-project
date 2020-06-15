@@ -1,7 +1,7 @@
-import{Picture} from "../interfaces/picture";
+import{Foodpic} from "../interfaces/foodpic";
 import{connect} from "../../src/database";
 
-export async function selectAllPictures(){
+export async function selectAllFoodpics(){
 	try {
 		const mySqlConnection = await connect()
 		const mySqlQuery = "SELECT BIN_TO_UUID(foodpicId) AS foodpicId, foodpicProfileId, foodpicRestaurantId, foodpicCaption, foodpicUrl FROM foodpic";
