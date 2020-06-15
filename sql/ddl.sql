@@ -28,6 +28,7 @@ create TABLE foodpic(
     foodpicId           BINARY(16)   not null,
     foodpicProfileId    BINARY(16)   not null,
     foodpicRestaurantId BINARY(16)   not null,
+    foodpicCaption VARCHAR(144) not null,
     foodpicUrl          VARCHAR(140) not null,
     foreign key (foodpicProfileId) references profile (profileId),
     foreign key (foodpicRestaurantId) references restaurant (restaurantId),

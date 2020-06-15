@@ -21,7 +21,7 @@ export async function deleteFoodpicController(request: Request, response: Respon
 export async function postFoodpicController(request: Request, response: Response, nextFunction: NextFunction) {
 	try {
 		const {foodpicProfileId, foodpicRestaurantId, foodpicCaption, foodpicUrl} = request.body
-		const foodpic: Foodpic = {foodpicId: null, foodpicId, foodpicRestaurantId, foodpicCaption, foodpicUrl}
+		const foodpic: Foodpic = {foodpicId: null, foodpicProfileId, foodpicRestaurantId, foodpicCaption, foodpicUrl}
 		const result = await insertFoodpic(foodpic)
 		return response.json({status: 200, data: null, message: result})
 	} catch(error) {

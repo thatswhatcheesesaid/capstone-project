@@ -4,3 +4,4 @@ export interface Foodpic {
 	foodpicRestaurantId: string,
 	foodpicUrl: string
 }
+
