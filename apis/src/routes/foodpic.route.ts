@@ -5,10 +5,10 @@ import {
 	getAllFoodpicsController,
 	getFoodpicByFoodpicProfileIdController,
 } from "../controllers/foodpic.controller";
-import {deleteFoodpic} from "../../utils/picture/deleteFoodpic";
-import {insertFoodpic} from "../../utils/picture/insertFoodpic";
-import {selectAllFoodpics} from "../../utils/picture/selectAllFoodpics";
-import {selectFoodpicByFoodpicProfileId} from "../../utils/picture/selectFoodpicByFoodpicProfileId";
+import {deleteFoodpic} from "../../utils/foodpic/deleteFoodpic";
+import {insertFoodpic} from "../../utils/foodpic/insertFoodpic";
+import {selectAllFoodpics} from "../../utils/foodpic/selectAllFoodpics";
+import {selectFoodpicByFoodpicProfileId} from "../../utils/foodpic/selectFoodpicByFoodpicProfileId";
 
 export const FoodpicRoute = Router()
 

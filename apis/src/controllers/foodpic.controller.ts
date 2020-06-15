@@ -1,10 +1,10 @@
 import {NextFunction, Request, Response} from "express";
 import {Status} from "../../utils/interfaces/status";
 import {Foodpic} from "../../utils/interfaces/foodpic";
-import {deleteFoodpic} from "../../utils/picture/deleteFoodpic";
-import {insertFoodpic} from "../../utils/picture/insertFoodpic";
-import {selectFoodpicByFoodpicProfileId} from "../../utils/picture/selectFoodpicByFoodpicProfileId";
-import {selectAllFoodpics} from "../../utils/picture/selectAllFoodpics";
+import {deleteFoodpic} from "../../utils/foodpic/deleteFoodpic";
+import {insertFoodpic} from "../../utils/foodpic/insertFoodpic";
+import {selectFoodpicByFoodpicProfileId} from "../../utils/foodpic/selectFoodpicByFoodpicProfileId";
+import {selectAllFoodpics} from "../../utils/foodpic/selectAllFoodpics";
 import exp from "constants";
 
 export async function deleteFoodpicController(request: Request, response: Response, nextFunction: NextFunction) {
