@@ -17,8 +17,9 @@ export async function getCheeseyByFoodpicIdAndProfileIdController(request: Reque
 
 export async function postCheeseyScoreController(request: Request, response: Response, nextFunction: NextFunction) {
     try {
-        const {cheeseyFoodPicId, cheeseyProfileId, cheeseyScore} = request.body
-        const cheesey: Cheesey = {cheeseyFoodPicId, cheeseyProfileId, cheeseyScore}
+        const {cheeseyFoodpicId, cheeseyProfileId, cheeseyScore} = request.body
+
+        const cheesey: Cheesey = {cheeseyFoodpicId, cheeseyProfileId, cheeseyScore}
         const result = await insertCheeseyScore(cheesey)
         return response.json({status: 200, data: null, message: result})
     } catch (error) {
