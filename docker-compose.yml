@@ -17,6 +17,7 @@ services:
       - 8080:4200
     user: "node"
     volumes:
+      - ./apis/utils:/home/node/app/utils
       - ./apis/src:/home/node/app/src
       - ./apis/tsconfig.json:/home/node/app/tsconfig.json
 volumes:
