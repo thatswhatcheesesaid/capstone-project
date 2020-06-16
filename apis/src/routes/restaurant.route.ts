@@ -10,7 +10,7 @@ import {selectAllRestaurants} from "../../utils/restaurant/selectAllRestaurants"
 
 export const RestaurantRoute = Router()
 
-RestaurantRoute.route("/restaurants")
+RestaurantRoute.route("/")
     .get(getAllRestaurantsController)
     .post(postRestaurantController)
 

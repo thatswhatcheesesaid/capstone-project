@@ -1,5 +1,5 @@
 import{NextFunction, Request, Response} from "express";
-import {Restaurant} from "../../utils/interfaces/Restaurant";
+import {Restaurant} from "../../utils/interfaces/restaurant";
 import {Status} from "../../utils/interfaces/status";
 import{deleteRestaurant} from "../../utils/restaurant/deleteRestaurant";
 import{insertRestaurant} from "../../utils/restaurant/insertRestaurant";

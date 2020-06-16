@@ -2,6 +2,7 @@ import express, {Application, Errback, ErrorRequestHandler, NextFunction, Reques
 
 import morgan from 'morgan';
 import {indexRoutes} from "./routes/index.route";
+import {RestaurantRoute} from "./routes/restaurant.route";
 
 // Routes
 
@@ -35,6 +36,7 @@ export class App {
     // private method for setting up routes in their basic sense (ie. any route that performs an action on profiles starts with /profiles)
     private routes () {
         this.app.use(indexRoutes);
+        this.app.use('/apis/restaurant', RestaurantRoute);
     }
 
     // starts the server and tells the terminal to post a message that the server is running and on what port
