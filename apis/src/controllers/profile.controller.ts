@@ -41,8 +41,8 @@ export async function getProfileByHashController(request: Request, response:Resp
 
 export async function postProfileController(request: Request, response:Response, nextFunction: NextFunction) {
     try {
-        const {profileId, profileActivationToken, profileEmail, profileName, profileHash} = request.body;
-        const profile: Profile = {profileId: null, profileActivationToken, profileEmail, profileName, profileHash};
+        const { profileActivationToken, profileEmail, profileName, profileHash} = request.body;
+        const profile: Profile = {profileId: null, profileActivationToken, profileEmail, profileHash, profileName};
         const result = await insertProfile(profile)
         return response.json({status:200, data:null, message: result})
     } catch (error) {
