@@ -5,6 +5,8 @@ import{deleteProfile} from "../../utils/profile/deleteProfile";
 import{insertProfile} from "../../utils/profile/insertProfile";
 import{selectProfileByEmail} from "../../utils/profile/selectProfileByEmail";
 import{selectProfileByHash} from "../../utils/profile/selectProfileByHash";
+import {selectProfileByProfileId} from "../../utils/profile/selectProfileByProfileId";
+import {selectAllProfiles} from "../../utils/profile/selectAllProfiles"
 
 export async function deleteProfileController(request: Request, response:Response, nextFunction: NextFunction) {
     try {
@@ -17,6 +19,16 @@ export async function deleteProfileController(request: Request, response:Respons
     }
 }
 
+
+export async function getAllProfilesController(request: Request, response:Response, nextFunction: NextFunction) {
+    try {
+        const data = await selectAllProfiles();
+        const status: Status = {status:200, data, message: null};
+        return response.json(status)
+    } catch (error) {
+        console.log(error)
+    }
+}
 export async function getProfileByEmailController(request: Request, response:Response, nextFunction: NextFunction) {
     try {
         const {profileEmail} = request.params;
@@ -32,6 +44,17 @@ export async function getProfileByHashController(request: Request, response:Resp
     try {
         const {profileHash} = request.params;
         const data = await selectProfileByEmail(profileHash);
+        const status: Status = {status:200, data, message: null};
+        return response.json(status)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export async function getProfileByProfileIdController(request: Request, response:Response, nextFunction: NextFunction) {
+    try {
+        const {profileId} = request.params;
+        const data = await selectProfileByProfileId(profileId);
         const status: Status = {status:200, data, message: null};
         return response.json(status)
     } catch (error) {
