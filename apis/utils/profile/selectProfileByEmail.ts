@@ -7,7 +7,7 @@ export async function selectProfileByEmail(profileEmail: string) {
 
         const mySqlQuery = "SELECT BIN_TO_UUID(profileId) as profileId, profileActivationToken, profileEmail, profileHash, profileName FROM profile WHERE profileEmail = :profileEmail"
 
-        const [rows] = await mySqlConnection.execute(mySqlQuery, profileEmail)
+        const [rows] = await mySqlConnection.execute(mySqlQuery, {profileEmail})
 
         return rows
     } catch (error) {

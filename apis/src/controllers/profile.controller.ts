@@ -4,7 +4,7 @@ import {Status} from "../../utils/interfaces/status";
 import{deleteProfile} from "../../utils/profile/deleteProfile";
 import{insertProfile} from "../../utils/profile/insertProfile";
 import{selectProfileByEmail} from "../../utils/profile/selectProfileByEmail";
-import{selectProfileByHash} from "../../utils/profile/selectProfileByHash";
+import{selectProfileByActivationToken} from "../../utils/profile/selectProfileByActivationToken";
 import {selectProfileByProfileId} from "../../utils/profile/selectProfileByProfileId";
 import {selectAllProfiles} from "../../utils/profile/selectAllProfiles"
 
@@ -40,10 +40,10 @@ export async function getProfileByEmailController(request: Request, response:Res
     }
 }
 
-export async function getProfileByHashController(request: Request, response:Response, nextFunction: NextFunction) {
+export async function getProfileByActivationTokenController(request: Request, response:Response, nextFunction: NextFunction) {
     try {
-        const {profileHash} = request.params;
-        const data = await selectProfileByEmail(profileHash);
+        const {profileActivationToken} = request.params;
+        const data = await selectProfileByActivationToken(profileActivationToken);
         const status: Status = {status:200, data, message: null};
         return response.json(status)
     } catch (error) {
