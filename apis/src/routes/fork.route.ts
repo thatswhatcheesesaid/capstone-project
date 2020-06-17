@@ -11,3 +11,4 @@ ForkRoute.route("/")
     .post(postForkScoreController)
 
 ForkRoute.route("/profileId/:profileId/restaurantId/:restaurantId")
+    .get(getForkByProfileIdAndRestaurantIdController)
