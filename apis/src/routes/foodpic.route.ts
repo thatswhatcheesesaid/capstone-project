@@ -19,5 +19,5 @@ FoodpicRoute.route("/")
 FoodpicRoute.route("/:foodpicId")
 	.delete(deleteFoodpicController)
 
-FoodpicRoute.route("/:profileId")
+FoodpicRoute.route("/foodpic/:foodpicProfileId")
 	.get(getFoodpicByFoodpicProfileIdController)
