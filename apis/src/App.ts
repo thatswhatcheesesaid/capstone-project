@@ -1,9 +1,10 @@
 import express, {Application, Errback, ErrorRequestHandler, NextFunction, Request, Response} from 'express';
-
 import morgan from 'morgan';
 import {indexRoutes} from "./routes/index.route";
 import {ProfileRoute} from "./routes/profile.route";
 import {signupRouter} from "./routes/sign-up.route";
+import {RestaurantRoute} from "./routes/restaurant.route";
+
 // Routes
 
 
@@ -38,6 +39,7 @@ export class App {
         this.app.use(indexRoutes);
         this.app.use("/apis/profile", ProfileRoute)
         this.app.use("/apis/signup", signupRouter)
+        this.app.use('/apis/restaurant', RestaurantRoute);
     }
 
     // starts the server and tells the terminal to post a message that the server is running and on what port
