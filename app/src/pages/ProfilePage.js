@@ -74,10 +74,10 @@ export function ProfilePage () {
 				<Image fluid src="matt-pic.png" alt="this is a box of mac and cheese"width={200}/>
 			</Col>
 			{/*<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>*/}
-			{/*<Image src="kevin-picture.png" alt="this is a box of mac and cheese"/>*/}
+			{/*<Image src="kevin-foodpic.png" alt="this is a box of mac and cheese"/>*/}
 			{/*<Image src="matt-pic.png" alt="this is a box of mac and cheese"/>*/}
 			{/*<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>*/}
-			{/*<Image src="kevin-picture.png" alt="this is a box of mac and cheese"/>*/}
+			{/*<Image src="kevin-foodpic.png" alt="this is a box of mac and cheese"/>*/}
 			{/*<Image src="matt-pic.png" alt="this is a box of mac and cheese"/>*/}
 		</Row>
 

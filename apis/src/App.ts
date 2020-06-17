@@ -1,8 +1,11 @@
 import express, {Application, Errback, ErrorRequestHandler, NextFunction, Request, Response} from 'express';
-
 import morgan from 'morgan';
 import {indexRoutes} from "./routes/index.route";
 import {ForkRoute} from "./routes/fork.route";
+import {FoodpicRoute} from "./routes/foodpic.route";
+import {ProfileRoute} from "./routes/profile.route";
+import {signupRouter} from "./routes/sign-up.route";
+import {RestaurantRoute} from "./routes/restaurant.route";
 
 // Routes
 
@@ -35,8 +38,12 @@ export class App {
 
     // private method for setting up routes in their basic sense (ie. any route that performs an action on profiles starts with /profiles)
     private routes () {
-        this.app.use("/apis", indexRoutes);
+        this.app.use(indexRoutes);
         this.app.use("/apis/fork", ForkRoute)
+        this.app.use("/apis/foodpic", FoodpicRoute)
+        this.app.use("/apis/profile", ProfileRoute)
+        this.app.use("/apis/signup", signupRouter)
+        this.app.use('/apis/restaurant', RestaurantRoute);
     }
 
     // starts the server and tells the terminal to post a message that the server is running and on what port
