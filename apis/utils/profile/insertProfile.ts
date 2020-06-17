@@ -8,7 +8,6 @@ export async function insertProfile(profile: Profile) {
         const [rows] = await mySqlConnection.execute(mySqlQuery, profile)
         return "Profile added successfully"
     } catch (error) {
-        console.log(error)
-        return undefined
+        throw new Error(error.message)
     }
 }

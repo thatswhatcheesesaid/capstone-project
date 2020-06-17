@@ -69,7 +69,7 @@ export async function postProfileController(request: Request, response:Response,
         const result = await insertProfile(profile)
         return response.json({status:200, data:null, message: result})
     } catch (error) {
-        console.log(error)
+        return response.json({status: 500, message: error.message})
     }
 }
 
