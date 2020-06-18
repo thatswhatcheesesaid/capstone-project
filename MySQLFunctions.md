@@ -21,7 +21,7 @@
 
 ####fork voting 
 
-**insertForkScore** insert forkScore on fork table
+**insertCheeseyScore** insert forkScore on fork table
 
 ##picture page
 
