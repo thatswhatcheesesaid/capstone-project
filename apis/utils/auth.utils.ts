@@ -1,4 +1,3 @@
-// import * as argon2 from 'argon2'; this gave me errors, so  I removed the 2 and it worked.
 import * as argon2 from 'argon2';
 const crypto = require('crypto');
 const {sign} = require('jsonwebtoken');
