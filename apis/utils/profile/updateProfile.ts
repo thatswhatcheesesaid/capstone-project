@@ -1,7 +1,7 @@
-import {Profile} from "../interfaces/Profile";
+import {Profile} from "../interfaces/profile";
 import {connect} from "../../src/database";
 
-export async function updateProfile(profile: Profile) {
+export async function updateProfile(profile: { profileName: string; profileEmail: string; profileActivationToken: null; profileId: string | null; profileHash: string }) {
 	try {
 
 		const mysqlConnection = await connect();

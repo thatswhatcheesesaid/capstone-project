@@ -4,6 +4,7 @@ import {Status} from "../../utils/interfaces/status";
 import{deleteRestaurant} from "../../utils/restaurant/deleteRestaurant";
 import{insertRestaurant} from "../../utils/restaurant/insertRestaurant";
 import{selectAllRestaurants} from "../../utils/restaurant/selectAllRestaurants";
+import {validationResult} from "express-validator";
 
 
 export async function deleteRestaurantController(request: Request, response:Response, nextFunction: NextFunction) {

@@ -4,6 +4,7 @@ import {Cheesey} from "../../utils/interfaces/cheesey";
 import {insertCheeseyScore} from "../../utils/cheesey/insertCheeseyScore";
 import {selectCheeseyByFoodpicIdAndProfileId} from "../../utils/cheesey/selectCheeseyByFoodpicIdAndProfileId";
 import {selectAllCheesey} from "../../utils/cheesey/selectAllCheesey"
+import {validationResult} from "express-validator";
 
 export async function getCheeseyByFoodpicIdAndProfileIdController(request: Request, response: Response, nextFunction: NextFunction) {
     try {

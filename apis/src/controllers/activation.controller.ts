@@ -1,6 +1,6 @@
 import {NextFunction, Request, Response} from "express";
 import {selectProfileByActivationToken} from "../../utils/profile/selectProfileByActivationToken";
-import {Profile} from "../../utils/interfaces/Profile";
+import {Profile} from "../../utils/interfaces/profile";
 import {updateProfile} from "../../utils/profile/updateProfile";
 
 export async function activationController(request: Request, response: Response, nextFunction: NextFunction) {

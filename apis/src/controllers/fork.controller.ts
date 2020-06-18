@@ -5,6 +5,7 @@ import {insertForkScore} from "../../utils/fork/insertForkScore";
 import {selectForkByProfileIdAndRestaurantId} from "../../utils/fork/selectForkByProfileIdAndRestaurantId";
 import {selectAllForks} from "../../utils/fork/selectAllForks"
 import {selectAllCheesey} from "../../utils/cheesey/selectAllCheesey";
+import {validationResult} from "express-validator";
 
 export async function getForkByProfileIdAndRestaurantIdController(request: Request, response: Response, nextFunction: NextFunction) {
     try {

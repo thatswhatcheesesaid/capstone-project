@@ -22,9 +22,9 @@ export async function signupProfileController (request: Request, response: Respo
         `
 
         const mailgunMessage = {
-                from: `Mailgun Sandbox <postmaster@${prcoess.env.MAILGUN_DOMAIN>`,
+                from: `Mailgun Sandbox <postmaster@${process.env.MAILGUN_DOMAIN}>`,
                 to: profileEmail,
-                subject: "One Step closer -- Account Activation",
+                subject: "One Step closer Sticky Head -- Account Activation",
                 text: 'Test email text',
                 html: message
         }
