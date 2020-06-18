@@ -6,7 +6,7 @@ import {ProfileRoute} from "./routes/profile.route";
 import {signupRouter} from "./routes/sign-up.route";
 import {RestaurantRoute} from "./routes/restaurant.route";
 import {ForkRoute} from "./routes/fork.route";
-
+import {CheeseyRoute} from "./routes/cheesey.route";
 // Routes
 
 
@@ -44,6 +44,7 @@ export class App {
         this.app.use("/apis/signup", signupRouter)
         this.app.use('/apis/restaurant', RestaurantRoute);
         this.app.use("/apis/fork", ForkRoute)
+        this.app.use("/apis/cheesey", CheeseyRoute)
     }
 
     // starts the server and tells the terminal to post a message that the server is running and on what port
