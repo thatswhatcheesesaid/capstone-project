@@ -7,6 +7,7 @@ import{selectProfileByEmail} from "../../utils/profile/selectProfileByEmail";
 import{selectProfileByActivationToken} from "../../utils/profile/selectProfileByActivationToken";
 import {selectProfileByProfileId} from "../../utils/profile/selectProfileByProfileId";
 import {selectAllProfiles} from "../../utils/profile/selectAllProfiles"
+import {validationResult} from "express-validator";
 
 export async function deleteProfileController(request: Request, response:Response, nextFunction: NextFunction) {
     try {

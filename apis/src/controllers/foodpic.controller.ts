@@ -5,6 +5,7 @@ import {deleteFoodpic} from "../../utils/foodpic/deleteFoodpic";
 import {insertFoodpic} from "../../utils/foodpic/insertFoodpic";
 import {selectFoodpicByFoodpicProfileId} from "../../utils/foodpic/selectFoodpicByFoodpicProfileId";
 import {selectAllFoodpics} from "../../utils/foodpic/selectAllFoodpics";
+import {validationResult} from "express-validator";
 import exp from "constants";
 
 export async function deleteFoodpicController(request: Request, response: Response, nextFunction: NextFunction) {

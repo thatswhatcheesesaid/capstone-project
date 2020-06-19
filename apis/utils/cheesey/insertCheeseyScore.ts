@@ -1,6 +1,7 @@
 import {Cheesey} from "../interfaces/cheesey";
 import {connect} from "../../src/database";
 
+
 export async function insertCheeseyScore(cheesey: Cheesey) {
     try {
         const mySqlConnection = await connect()

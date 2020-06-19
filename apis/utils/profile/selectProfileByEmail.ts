@@ -9,7 +9,9 @@ export async function selectProfileByEmail(profileEmail: string) {
 
         const [rows] = await mySqlConnection.execute(mySqlQuery, {profileEmail})
 
-        return rows
+        // return rows
+        // @ts-ignore is required so that rows can be interacted with like the array it is
+        return rows.length !== 0 ? {...rows[0]} : undefined;
     } catch (error) {
         console.log(error)
         return undefined
