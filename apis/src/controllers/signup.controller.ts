@@ -14,7 +14,7 @@ export async function signupProfileController (request: Request, response: Respo
         console.log(request.body)
         const profileHash = await setHash(profilePassword);
         const profileActivationToken = setActivationToken();
-        const basePath = `${request.protocol}://${request.get(`host`)}${request.originalUrl}/activation${profileActivationToken}`
+        const basePath = `${request.protocol}://${request.get(`host`)}${request.originalUrl}/activation/${profileActivationToken}`
 
         const message = `<h2>Welcome to That's What Cheese Said!</h2>
         <p>In order to start voting on restaurants and pictures you must confirm your account <p>
@@ -24,7 +24,7 @@ export async function signupProfileController (request: Request, response: Respo
         const mailgunMessage = {
                 from: `Mailgun Sandbox <postmaster@${process.env.MAILGUN_DOMAIN}>`,
                 to: profileEmail,
-                subject: "One Step closer Sticky Head -- Account Activation",
+                subject: "One Step closer -- Account Activation",
                 text: 'Test email text',
                 html: message
         }
@@ -58,7 +58,7 @@ export async function signupProfileController (request: Request, response: Respo
 
             const status: Status = {
                     status: 200,
-                    message: "Profile successfully created please check you",
+                    message: "Profile successfully created please check your email",
                     data: null
             };
             mg.messages().sendMime(compiledEmail, (sendError: any, body: any) => {
