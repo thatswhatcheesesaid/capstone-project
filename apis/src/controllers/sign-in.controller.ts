@@ -14,7 +14,6 @@ export async function signInController(request: Request, response: Response, nex
 
 		const {profilePassword} = request.body;
 
-
 		passport.authenticate(
 			'local',
 			{session: false},
@@ -23,7 +22,20 @@ export async function signInController(request: Request, response: Response, nex
 				const signature : string = uuid();
 				const authorization : string = generateJwt({profileId, profileEmail}, signature);
 
+				const signInFailed = (message: string) => response.json({
+					status: 400,
+					data: null,
+					message
+				});
+
 				const signInSuccessful = () => {
+
+
+
+					if(passportUser.profileActivationToken !== null) {
+						signInFailed("please activate your account")
+					}
+
 					if (request.session) {
 						request.session.profile = passportUser;
 						request.session.jwt = authorization;
@@ -37,15 +49,9 @@ export async function signInController(request: Request, response: Response, nex
 					return response.json({status: 200, data: null, message: "sign in successful"})
 				};
 
-				const signInFailed = () => response.json({
-					status: 400,
-					data: null,
-					message: "incorrect username or password"
-				});
-
 				const isPasswordValid: boolean = passportUser && await validatePassword(passportUser.profileHash, profilePassword);
 
-				return isPasswordValid ? signInSuccessful() : signInFailed();
+				return isPasswordValid ? signInSuccessful() : signInFailed("Invalid email or password");
 			})(request, response, nextFunction)
 	} catch (error) {
 		return response.json({status: 500, data: null, message: error.message})

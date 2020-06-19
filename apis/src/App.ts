@@ -10,7 +10,7 @@ import {RestaurantRoute} from "./routes/restaurant.route";
 import {CheeseyRoute} from "./routes/cheesey.route";
 import{SignInRouter} from "./routes/sign-in.route"
 import {passportMiddleware} from "./controllers/sign-in.controller";
-
+import passport from "passport";
 const cookieParser = require('cookie-parser')
 const session = require("express-session")
 const MemoryStore = require ("memorystore")(session)
@@ -52,6 +52,9 @@ export class App {
             resave: true,
             maxAge: "3h"
         }
+        this.app.use(session(sessionConfig))
+        this.app.use(passport.initialize());
+        this.app.use(passport.session());
     }
 
     // private method for setting up routes in their basic sense (ie. any route that performs an action on profiles starts with /profiles)
