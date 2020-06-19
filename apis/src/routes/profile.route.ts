@@ -22,8 +22,6 @@ ProfileRoute.route("/:profileId")
     .delete(deleteProfileController)
     .get(getProfileByProfileIdController)
 
-ProfileRoute.route("/profileEmail/:profileEmail")
-    .get(getProfileByEmailController)
 
 ProfileRoute.route("/profileActivationToken/:profileActivationToken")
     .get(getProfileByActivationTokenController)
