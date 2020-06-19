@@ -66,7 +66,8 @@ export class App {
         this.app.use('/apis/restaurant', RestaurantRoute);
         this.app.use("/apis", indexRoutes);
         this.app.use("/apis/cheesey", CheeseyRoute)
-        this.app.use("apis/sign-up", SignInRouter)
+        this.app.use("/apis/sign-in", SignInRouter)
+
     }
 
     // starts the server and tells the terminal to post a message that the server is running and on what port
