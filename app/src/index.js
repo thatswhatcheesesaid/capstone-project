@@ -9,44 +9,45 @@ import { Footer } from './pages/Footer';
 import {LandingPage} from './pages/LandingPage'
 import {ProfilePage} from './pages/ProfilePage'
 import {StaticNavbar} from './pages/StaticNavbar'
-import {RestaurantPage} from './pages/RestaurantPage'
+import {RestaurantPage} from './pages/RestaurantPage/RestaurantPage'
 import {LogInPage} from "./pages/LogInPage";
 import {AboutUsPage} from "./pages/AboutUsPage";
 import {PicturePage} from './pages/PicturePage'
 import {ResetPage} from './pages/ResetPage'
 
-// import reducer from "./store"
+import reducer from "./store"
 import { Provider } from 'react-redux'
+import { configureStore } from '@reduxjs/toolkit'
 
-// const store = configureStore({reducer})
+const store = configureStore({reducer})
 
 const Routing = () => (
   <>
+    <Provider store={store}>
+      <React.StrictMode>
+        <StaticNavbar/>
+      </React.StrictMode>
 
-    <React.StrictMode>
-      <StaticNavbar/>
-    </React.StrictMode>
-
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={LandingPage}/>
-        <Route exact path="/profile" component={ProfilePage}/>
-        <Route exact path="/restaurants" component={RestaurantPage}/>
-        <Route exact path="/logIn" component={LogInPage}/>
-        <Route exact path="/aboutUs" component={AboutUsPage}/>
-        <Route exact path="/cheesey" component={PicturePage}/>
-        <Route exact path="/reset" component={ResetPage}/>
-        <Route component={Home}/>
-        <Route component={FourOhFour}/>
-      </Switch>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={LandingPage}/>
+          <Route exact path="/profile" component={ProfilePage}/>
+          <Route exact path="/restaurants" component={RestaurantPage}/>
+          <Route exact path="/logIn" component={LogInPage}/>
+          <Route exact path="/aboutUs" component={AboutUsPage}/>
+          <Route exact path="/cheesey" component={PicturePage}/>
+          <Route exact path="/reset" component={ResetPage}/>
+          <Route component={Home}/>
+          <Route component={FourOhFour}/>
+        </Switch>
+      </BrowserRouter>
 
 
-    <React.StrictMode>
-      <Footer/>
-    </React.StrictMode>
-
+      <React.StrictMode>
+        <Footer/>
+      </React.StrictMode>
+    </Provider>
 
   </>
 );
-ReactDOM.render(<Routing/>, document.querySelector('#root'));
+ReactDOM.render(Routing(store), document.querySelector('#root'));
