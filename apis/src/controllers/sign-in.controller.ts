@@ -32,9 +32,11 @@ export async function signInController(request: Request, response: Response, nex
 
 
 
-					if(passportUser.profileActivationToken !== null) {
-						signInFailed("please activate your account")
-					}
+					// if(passportUser.profileActivationToken !== null) {
+					// 	signInFailed("please activate your account")
+					// }
+//add back when live
+
 
 					if (request.session) {
 						request.session.profile = passportUser;

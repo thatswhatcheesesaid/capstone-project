@@ -21,6 +21,7 @@ create TABLE restaurant(
     restaurantGoogleLink         VARCHAR(140) not null,
     restaurantName               VARCHAR(140) not null,
     restaurantSocialMediaUrl     VARCHAR(140),
+    unique (restaurantName),
     primary key (restaurantId)
 );
 
