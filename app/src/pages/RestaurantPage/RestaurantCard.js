@@ -5,13 +5,13 @@ import Image from 'react-bootstrap/Image'
 import Card from 'react-bootstrap/Card'
 
 export function RestaurantCard (props) {
-  const {restaurant} = props
+  const {restaurant, rank} = props
   return(
     <>
       <Card className="my-3 border-0 bg-transparent">
         <Row fluid>
           <Col md></Col>
-          <Col md={2} className="display-1 pt-3 text-center">1</Col>
+          <Col md={2} className="display-1 pt-3 text-center">{rank}</Col>
           <Col md={1} className="pt-4 text-center">
             <label htmlFor="upfork">Upfork</label>
             <input type="image" id="upfork" src="upfork.png" alt="Submit Upfork" width={50} />
@@ -19,7 +19,8 @@ export function RestaurantCard (props) {
             <label for="downfork">Downfork</label>
           </Col>
           <Col md={1} className="text-center">
-            <p className="pt-5">Upfork Score +/-</p>
+            <p className="pt-4">Score:</p>
+            <p className="display-4 pt-2">{restaurant.forkScore}</p>
           </Col>
           <Col md={2} className="text-center pt-2">
             <Image src="blue-box.jpg" alt="Blue Box Mac" width={200} fluid />

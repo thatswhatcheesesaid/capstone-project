@@ -37,7 +37,6 @@ const Routing = () => (
           <Route exact path="/aboutUs" component={AboutUsPage}/>
           <Route exact path="/cheesey" component={PicturePage}/>
           <Route exact path="/reset" component={ResetPage}/>
-          <Route component={Home}/>
           <Route component={FourOhFour}/>
         </Switch>
       </BrowserRouter>

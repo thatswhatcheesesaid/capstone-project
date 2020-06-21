@@ -37,7 +37,7 @@ export const RestaurantPage = () => {
         {/* Restaurant Ranking List */}
 
         <Container className="py-3 text-white">
-          {restaurants.map(restaurant => <RestaurantCard restaurant={restaurant} key={restaurant.restaurantId} foo="bar" />)}
+          {restaurants.map((restaurant, index) => <RestaurantCard restaurant={restaurant} key={restaurant.restaurantId} rank={index+1} />)}
         </Container>
 
         {/* Submit Button routes to About Me Page */}
