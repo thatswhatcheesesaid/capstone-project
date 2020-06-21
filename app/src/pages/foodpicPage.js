@@ -13,7 +13,7 @@ import Button from 'react-bootstrap/Button'
 //style={{ backgroundColor: 'rgb(15, 14, 23)' }} This is for the body
 //style={{ color: 'rgb(167, 169, 190)'}} This is for the text
 
-export function PicturePage() {
+export function foodpicPage() {
 
 	return(
 	<>
