@@ -6,7 +6,7 @@ import {Route, Switch} from "react-router";
 import {FourOhFour} from "./pages/FourOhFour";
 import {Home} from "./pages/Home";
 import { Footer } from './pages/Footer';
-import {LandingPage} from './pages/LandingPage'
+import {LandingPage} from './pages/LandingPage/LandingPage'
 import {ProfilePage} from './pages/ProfilePage'
 import {StaticNavbar} from './pages/StaticNavbar'
 import {RestaurantPage} from './pages/RestaurantPage/RestaurantPage'

@@ -6,8 +6,21 @@ import Card from 'react-bootstrap/Card'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
+import { RestaurantCard } from '../RestaurantPage/RestaurantCard'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchAllRestaurants, fetchTop5Restaurant } from '../../store/restaurant'
+import { Top5RestaurantCard } from './Top5RestaurantCard'
 
 export const LandingPage = () => {
+  const dispatch = useDispatch()
+
+  const restaurants = useSelector(store => store.restaurants ? store.restaurants : [])
+
+  const sideEffects = () => {
+    dispatch(fetchTop5Restaurant())
+  }
+
+  React.useEffect(sideEffects, [])
   return (
     <>
       <main style={{ backgroundColor: 'black' }} className="text-white">
@@ -30,51 +43,7 @@ export const LandingPage = () => {
         <Container className="text-center" fluid>
           <Row>
             <Col></Col>
-            <Col md={2}>
-              <Card className="border-0 bg-transparent">
-                <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
-                <Card.Body>
-                  <Card.Title><h3>#1 Restaurant</h3></Card.Title>
-                  <Card.Text><p>Restaurant Name</p><p>Score</p></Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} md={2}>
-              <Card className="border-0 bg-transparent">
-                <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
-                <Card.Body>
-                  <Card.Title><h3>#2 Restaurant</h3></Card.Title>
-                  <Card.Text><p>Restaurant Name</p><p>Score</p></Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} md={2}>
-              <Card className="border-0 bg-transparent">
-                <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
-                <Card.Body>
-                  <Card.Title><h3>#3 Restaurant</h3></Card.Title>
-                  <Card.Text><p>Restaurant Name</p><p>Score</p></Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} md={2}>
-              <Card className="border-0 bg-transparent">
-                <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
-                <Card.Body>
-                  <Card.Title><h3>#4 Restaurant</h3></Card.Title>
-                  <Card.Text><p>Restaurant Name</p><p>Score</p></Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} md={2}>
-              <Card className="border-0 bg-transparent">
-                <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
-                <Card.Body>
-                  <Card.Title><h3>#5 Restaurant</h3></Card.Title>
-                  <Card.Text><p>Restaurant Name</p><p>Score</p></Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
+            {restaurants.map((restaurant, index) => <Top5RestaurantCard restaurant={restaurant} key={restaurant.restaurantId} rank={index+1} />)}
             <Col></Col>
           </Row>
           <Row>
