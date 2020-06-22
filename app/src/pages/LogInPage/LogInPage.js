@@ -14,7 +14,7 @@ import {httpConfig} from "../../shared/utils/http-config";
 
 // export function LogInPage() {
 
-export const SignUpForm = () => {
+export const LogInPage = () => {
 	const signUp = {
 		profileName: "",
 		profileEmail: "",
@@ -39,9 +39,34 @@ export const SignUpForm = () => {
 		profilePasswordConfirm: Yup.string()
 			.required("Confirm password is required")
 			.min(8, "Confirmed password must have at least eight characters")
-	})
+	});
 
+	const submitSignUp = (values, {resetForm, setStatus}) => {
 
+	httpConfig.post("/apis/sign-up/", values)
+		.then(reply => {
+				let {message, type} = reply;
+
+				if(reply.status === 200) {
+					resetForm();
+					setStatus({message, type});
+				}
+				setStatus({message, type});
+			}
+		);
+	};
+
+	return (
+
+		<Formik
+			initialValues={signUp}
+			onSubmit={submitSignUp}
+			validationSchema={validator}
+		>
+			{LogInPageContent}
+		</Formik>
+
+	)
 
 	// return (
 	// 	<>
