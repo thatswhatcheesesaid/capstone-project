@@ -10,7 +10,7 @@ import {LandingPage} from './pages/LandingPage'
 import {ProfilePage} from './pages/ProfilePage'
 import {StaticNavbar} from './pages/StaticNavbar'
 import {RestaurantPage} from './pages/RestaurantPage'
-import {LogInPage} from "./pages/LogInPage";
+import {LogInPage} from "./pages/LogInPage/LogInPage";
 import {AboutUsPage} from "./pages/AboutUsPage";
 import {PicturePage} from './pages/PicturePage'
 import {ResetPage} from './pages/ResetPage'

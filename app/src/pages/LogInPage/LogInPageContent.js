@@ -7,7 +7,21 @@ import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 
 
-export function LogInPage() {
+export const LogInPageContent = (props) => {
+
+	const {
+		status,
+		values,
+		errors,
+		touched,
+		dirty,
+		isSubmitting,
+		handleChange,
+		handleBlur,
+		handleSubmit,
+		handleReset
+	} = props;
+
 	return (
 		<>
 
