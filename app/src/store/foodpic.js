@@ -5,17 +5,20 @@ const slice = createSlice({
 	name: "foodpic",
 	initialState: [],
 	reducers: {
-		selectAllFoodpics : (posts, action) => {
+		getAllFoodpics : (posts, action) => {
+			return action.payload
+		},
+		getTopFiveFoodpics : (posts, action) =>{
 			return action.payload
 		}
 	}
 })
 
-export const {selectAllFoodpics} = slice.actions
+export const {getAllFoodpics, getTopFiveFoodpics} = slice.actions
 
-export const fetchAllFoodpics = () => async (dispatch) => {
+export const fetchAllFoodpic = () => async (dispatch) => {
 	const {data} = await httpConfig(`/apis/foodpic`)
-	dispatch(selectAllFoodpics(data))
+	dispatch(getAllFoodpics(data))
 }
 
 export default slice.reducer

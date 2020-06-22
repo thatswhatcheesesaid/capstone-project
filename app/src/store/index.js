@@ -1,4 +1,4 @@
 import {combineReducers} from 'redux'
-import foodpic from "./foodpic"
+import foodpics from "./foodpics"
 
-export default combineReducers({foodpic})
+export default combineReducers({foodpics})

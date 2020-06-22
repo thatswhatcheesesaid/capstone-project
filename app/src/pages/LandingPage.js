@@ -92,51 +92,7 @@ export const LandingPage = () => {
         <Container className="text-center" fluid>
           <Row>
             <Col></Col>
-            <Col md={2}>
-              <Card className="border-0 bg-transparent">
-                <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
-                <Card.Body>
-                  <Card.Title><h3>#1 Picture</h3></Card.Title>
-                  <Card.Text><p>User/Restaurant Name</p><p>Score</p></Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} md={2}>
-              <Card className="border-0 bg-transparent">
-                <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
-                <Card.Body>
-                  <Card.Title><h3>#2 Picture</h3></Card.Title>
-                  <Card.Text><p>User/Restaurant Name</p><p>Score</p></Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} md={2}>
-              <Card className="border-0 bg-transparent">
-                <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
-                <Card.Body>
-                  <Card.Title><h3>#3 Picture</h3></Card.Title>
-                  <Card.Text><p>User/Restaurant Name</p><p>Score</p></Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} md={2}>
-              <Card className="border-0 bg-transparent">
-                <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
-                <Card.Body>
-                  <Card.Title><h3>#4 Picture</h3></Card.Title>
-                  <Card.Text><p>User/Restaurant Name</p><p>Score</p></Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} md={2}>
-              <Card className="border-0 bg-transparent">
-                <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
-                <Card.Body>
-                  <Card.Title><h3>#5 Picture</h3></Card.Title>
-                  <Card.Text><p>User/Restaurant Name</p><p>Score</p></Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
+            {}
             <Col></Col>
           </Row>
           <Row>

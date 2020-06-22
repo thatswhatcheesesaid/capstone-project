@@ -3,12 +3,13 @@ import {
 	deleteFoodpicController,
 	postFoodpicController,
 	getAllFoodpicsController,
-	getFoodpicByFoodpicProfileIdController,
+	getFoodpicByFoodpicProfileIdController, getTopFiveFoodpicsController,
 } from "../controllers/foodpic.controller";
 import {deleteFoodpic} from "../../utils/foodpic/deleteFoodpic";
 import {insertFoodpic} from "../../utils/foodpic/insertFoodpic";
 import {selectAllFoodpics} from "../../utils/foodpic/selectAllFoodpics";
 import {selectFoodpicByFoodpicProfileId} from "../../utils/foodpic/selectFoodpicByFoodpicProfileId";
+import {getHeapCodeStatistics} from "v8";
 
 export const FoodpicRoute = Router()
 
@@ -21,3 +22,6 @@ FoodpicRoute.route("/:foodpicId")
 
 FoodpicRoute.route("/foodpic/:foodpicProfileId")
 	.get(getFoodpicByFoodpicProfileIdController)
+
+FoodpicRoute.route("/topFive")
+	.get(getTopFiveFoodpicsController)

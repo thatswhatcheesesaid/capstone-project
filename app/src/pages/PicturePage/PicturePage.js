@@ -6,6 +6,9 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
+import {CheeseyVote} from "./CheeseyVote";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchAllFoodpic} from "../../store/foodpic";
 // import Style from 'react-bootstrap/Style'
 
 //**Here is the inline styling for text and background
@@ -13,8 +16,14 @@ import Button from 'react-bootstrap/Button'
 //style={{ backgroundColor: 'rgb(15, 14, 23)' }} This is for the body
 //style={{ color: 'rgb(167, 169, 190)'}} This is for the text
 
-export function foodpicPage() {
+export function PicturePage() {
+	const dispatch = useDispatch()
+	const foodpics = useSelector(store => store.foodpics ? store.foodpics : [])
+	const sideEffects = () => {
+		dispatch(fetchAllFoodpic())
+	}
 
+	React.useEffect(sideEffects, [])
 	return(
 	<>
 
@@ -70,16 +79,7 @@ export function foodpicPage() {
 	<Container fluid>
 		<h1 className="display-3 text-center py-4" style={{ color: 'rgb(167, 169, 190)'}}>Vote Here</h1>
 		<Row className="justify-content-center">
-			<Col className="pr-5 text-center">
-				<Image fluid src="blue-box-500px.png" alt="this is a box of mac and cheese"/>
-				<p style={{ color: 'rgb(167, 169, 190)'}}>This is the name of the restaurant</p>
-				<Button variant='flat'><strong>Cheesey</strong></Button>
-			</Col>
-			<Col className="pl-5 text-center">
-				<Image fluid src="blue-box-500px.png" alt="this is a box of mac and cheese"/>
-				<p style={{ color: 'rgb(167, 169, 190)'}}>This is the name of the restaurant</p>
-				<Button variant='flat'><strong>Cheesey</strong></Button>
-			</Col>
+			{foodpics.map(foodpic => <CheeseyVote foodpic={foodpic} key={foodpic.foodpicid}/>)}
 		</Row>
 	</Container>
 
