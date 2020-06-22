@@ -12,7 +12,7 @@ import {StaticNavbar} from './pages/StaticNavbar'
 import {RestaurantPage} from './pages/RestaurantPage/RestaurantPage'
 import {LogInPage} from "./pages/LogInPage";
 import {AboutUsPage} from "./pages/AboutUsPage";
-import {PicturePage} from './pages/PicturePage'
+import {PicturePage} from './pages/PicturePage/PicturePage'
 import {ResetPage} from './pages/ResetPage'
 
 import reducer from "./store"

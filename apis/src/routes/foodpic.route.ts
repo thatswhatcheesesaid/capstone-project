@@ -4,6 +4,7 @@ import {
 	postFoodpicController,
 	getAllFoodpicsController,
 	getFoodpicByFoodpicProfileIdController,
+	getTopFiveFoodpicsController
 } from "../controllers/foodpic.controller";
 import {deleteFoodpic} from "../../utils/foodpic/deleteFoodpic";
 import {insertFoodpic} from "../../utils/foodpic/insertFoodpic";
@@ -21,3 +22,6 @@ FoodpicRoute.route("/:foodpicId")
 
 FoodpicRoute.route("/foodpic/:foodpicProfileId")
 	.get(getFoodpicByFoodpicProfileIdController)
+
+FoodpicRoute.route("/topFive")
+	.get(getTopFiveFoodpicsController)
