@@ -56,20 +56,20 @@ export const LogInPage = () => {
 		);
 	};
 
-	const submitLogIn = (values, {resetForm, setStatus}) => {
-
-		httpConfig.post("/apis/sign-in/", values)
-			.then(reply => {
-					let {message, type} = reply;
-
-					if(reply.status === 200) {
-						resetForm();
-						setStatus({message, type});
-					}
-					setStatus({message, type});
-				}
-			);
-	};
+	// const submitLogIn = (values, {resetForm, setStatus}) => {
+	//
+	// 	httpConfig.post("/apis/sign-in/", values)
+	// 		.then(reply => {
+	// 				let {message, type} = reply;
+	//
+	// 				if(reply.status === 200) {
+	// 					resetForm();
+	// 					setStatus({message, type});
+	// 				}
+	// 				setStatus({message, type});
+	// 			}
+	// 		);
+	// };
 
 
 	return (
