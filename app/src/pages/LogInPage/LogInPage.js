@@ -56,12 +56,29 @@ export const LogInPage = () => {
 		);
 	};
 
+	const submitLogIn = (values, {resetForm, setStatus}) => {
+
+		httpConfig.post("/apis/sign-in/", values)
+			.then(reply => {
+					let {message, type} = reply;
+
+					if(reply.status === 200) {
+						resetForm();
+						setStatus({message, type});
+					}
+					setStatus({message, type});
+				}
+			);
+	};
+
+
 	return (
 
 		<Formik
 			initialValues={signUp}
 			onSubmit={submitSignUp}
 			validationSchema={validator}
+
 		>
 			{LogInPageContent}
 		</Formik>

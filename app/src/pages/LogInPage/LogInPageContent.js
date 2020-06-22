@@ -85,8 +85,8 @@ export const LogInPageContent = (props) => {
 // 							Forgot password?
 // 						</Button>
 // 					</Form>
-// 					<Image className={'py-3'} src='BlueBox.jpg' width={300} rounded/>
-// 				</Col>
+// // 					<Image className={'py-3'} src='BlueBox.jpg' width={300} rounded/>
+// // 				</Col>
 // 			</Row>
 // 		</Container>
 //
@@ -205,17 +205,79 @@ return (
 			</div>
 
 			<div className="form-group">
-				<button className="btn btn-primary mb-2" type="submit">Submit</button>
+				<button className="btn btn-primary mb-2 px-1" type="submit">Submit</button>
 				<button
-					className="btn btn-danger mb-2"
+					className="btn btn-primary mb-2"
 					onClick={handleReset}
 					disabled={!dirty || isSubmitting}
 				>Reset
 				</button>
 			</div>
 
-			<FormDebugger {...props} />
+			{/*<FormDebugger {...props} />*/}
 					</Col>
+
+				<Col style={{ color: 'rgb(167, 169, 190)'}}>
+					<h1>Log in</h1>
+
+						<div className="form-group">
+							<label htmlFor="profileEmail">Email Address</label>
+							<div className="input-group">
+								<input
+									className="form-control"
+									id="profileEmail"
+									type="email"
+									value={values.profileEmail}
+									placeholder="Enter email"
+									onChange={handleChange}
+									onBlur={handleBlur}
+
+								/>
+							</div>
+							{
+								errors.profileEmail && touched.profileEmail && (
+									<div className="alert alert-danger">
+										{errors.profileEmail}
+									</div>
+								)
+							}
+					</div>
+
+					{/*controlId must match what is defined by the initialValues object*/}
+					<div className="form-group">
+						<label htmlFor="profilePassword">Password</label>
+						<div className="input-group">
+							<input
+								id="profilePassword"
+								className="form-control"
+								type="password"
+								placeholder="Password"
+								value={values.profilePassword}
+								onChange={handleChange}
+								onBlur={handleBlur}
+							/>
+						</div>
+						{errors.profilePassword && touched.profilePassword && (
+							<div className="alert alert-danger">{errors.profilePassword}</div>
+						)}
+					</div>
+
+					<div className="form-group">
+						<button className="btn btn-primary mb-2 px-1" type="submit">Submit</button>
+						<button
+							className="btn btn-primary mb-2"
+							onClick={handleReset}
+							disabled={!dirty || isSubmitting}
+						>Reset
+						</button>
+					</div>
+
+							<Button variant="primary" type="submit">
+								Forgot password?
+							</Button>
+
+				</Col>
+
 				</Row>
 			</Container>
 		</form>
