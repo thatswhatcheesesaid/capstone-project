@@ -8,22 +8,14 @@ const slice = createSlice({
 		getAllFoodpics : (posts, action) => {
 			return action.payload
 		},
-		getTopFiveFoodpics : (posts, action) =>{
-			return action.payload
-		}
 	}
 })
 
-export const {getAllFoodpics, getTopFiveFoodpics} = slice.actions
+export const {getAllFoodpics} = slice.actions
 
 export const fetchAllFoodpic = () => async (dispatch) => {
 	const {data} = await httpConfig(`/apis/foodpic`)
 	dispatch(getAllFoodpics(data))
-}
-
-export const fetchTopFiveFoodpic = () => async (dispatch) => {
-	const {data} = await httpConfig(`/apis/foodpic/topFive`)
-	dispatch(getTopFiveFoodpics(data))
 }
 
 
