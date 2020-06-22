@@ -43,7 +43,7 @@ export const LogInPage = () => {
 
 	const submitSignUp = (values, {resetForm, setStatus}) => {
 
-	httpConfig.post("/apis/sign-up/", values)
+	httpConfig.post("/apis/signup/", values)
 		.then(reply => {
 				let {message, type} = reply;
 
