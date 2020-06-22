@@ -7,7 +7,7 @@ export async function selectAllRestaurants() : Promise<any[] | undefined> {
         const mySqlQuery = "SELECT BIN_TO_UUID(restaurant.restaurantId) as restaurantId, restaurant.restaurantFeaturedPic, restaurant.restaurantFeaturedPicCaption, restaurant.restaurantGoogleLink, restaurant.restaurantName, restaurant.restaurantSocialMediaUrl, SUM(fork.forkScore) as forkScore FROM restaurant LEFT JOIN fork on restaurant.restaurantId = fork.forkRestaurantId GROUP BY restaurant.restaurantId ORDER BY forkScore DESC";
         const [rows] = await mySqlConnection.execute(mySqlQuery)
         // @ts-ignore
-        return rows.length !== 0 ? {...rows[0]} : undefined;
+        return rows.length !== 0 ? [...rows] : undefined;
     } catch (error) {
         console.log(error)
         return undefined

@@ -3,14 +3,14 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 
-export function TopFiveFoodpics({foodpic}) {
+export function TopFiveFoodpics({foodpic, rank}) {
   return (
     <>
       <Col xs={6} md={2}>
         <Card className="border-0 bg-transparent">
           <Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
           <Card.Body>
-            <Card.Title><p>Picture</p></Card.Title>
+            <Card.Title><p>#{rank} Picture</p></Card.Title>
             <Card.Text><p>Score</p></Card.Text>
           </Card.Body>
         </Card>

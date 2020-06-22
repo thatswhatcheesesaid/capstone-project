@@ -44,6 +44,7 @@ export async function getTop5RestaurantController(request: Request, response:Res
     try {
         const reply = await selectAllRestaurants();
         const handleReply = (reply: any[]) => reply.splice(0, 5)
+        console.log(reply)
         const data = reply ? handleReply(reply) : []
         const status: Status = {status:200, data: data, message: null};
         return response.json(status)

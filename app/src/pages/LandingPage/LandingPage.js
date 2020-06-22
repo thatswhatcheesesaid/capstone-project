@@ -15,7 +15,7 @@ export const LandingPage = () => {
 
   const restaurants = useSelector(store => store.restaurants ? store.restaurants : [])
   const foodpics = useSelector(store => store.foodpics ? store.foodpics : [])
-
+  console.log(foodpics)
   const sideEffects = () => {
     dispatch(fetchTop5Restaurant())
     dispatch(fetchTopFiveFoodpic())
