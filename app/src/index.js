@@ -14,13 +14,14 @@ import {LogInPage} from "./pages/LogInPage";
 import {AboutUsPage} from "./pages/AboutUsPage";
 import {PicturePage} from './pages/PicturePage/PicturePage'
 import {ResetPage} from './pages/ResetPage'
-// import reducer from "./store"
+import reducer from "./store"
 import { Provider } from 'react-redux'
-// const store = configureStore({reducer})
+import {configureStore} from "@reduxjs/toolkit";
+const store = configureStore({reducer})
 
 const Routing = () => (
   <>
-
+   <Provider store={store}>
     <React.StrictMode>
       <StaticNavbar/>
     </React.StrictMode>
@@ -44,7 +45,7 @@ const Routing = () => (
       <Footer/>
     </React.StrictMode>
 
-
+  </Provider>
   </>
 );
 ReactDOM.render(<Routing/>, document.querySelector('#root'));

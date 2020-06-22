@@ -3,7 +3,9 @@ import {
 	deleteFoodpicController,
 	postFoodpicController,
 	getAllFoodpicsController,
-	getFoodpicByFoodpicProfileIdController, getTopFiveFoodpicsController,
+	getFoodpicByFoodpicProfileIdController,
+	getTopFiveFoodpicsController
+
 } from "../controllers/foodpic.controller";
 import {deleteFoodpic} from "../../utils/foodpic/deleteFoodpic";
 import {insertFoodpic} from "../../utils/foodpic/insertFoodpic";

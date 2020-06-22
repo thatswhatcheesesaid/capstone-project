@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button'
 import {CheeseyVote} from "./CheeseyVote";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchAllFoodpic} from "../../store/foodpic";
+import {TopFiveFoodpics} from "./TopFiveFoodpics";
 // import Style from 'react-bootstrap/Style'
 
 //**Here is the inline styling for text and background
@@ -22,7 +23,7 @@ export function PicturePage() {
 	const sideEffects = () => {
 		dispatch(fetchAllFoodpic())
 	}
-
+console.log(foodpics)
 	React.useEffect(sideEffects, [])
 	return(
 	<>
@@ -46,42 +47,23 @@ export function PicturePage() {
 
 
 {/*This is the body of the page*/}
-<main style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
+<main style={{ backgroundColor: 'rgb(15, 14, 23)' }} className="text-white">
 
 {/*This is the title*/}
 		<Container fluid className="text-center py-5">
-			<h1 className="display-1" style={{ color: 'rgb(167, 169, 190)'}}>Mac and Cheese</h1>
+			<h1 className="display-1">Mac and Cheese</h1>
 		</Container>
 
 {/*This is the top 5 pics*/}
-		<Container fluid className="text-center">
-			<h1 className="display-3 text-center py-4" style={{ color: 'rgb(167, 169, 190)'}}>Top 5</h1>
-			<Row className="justify-content-around">
-				<Col  md={2}>
-					<Image fluid src="carl-pic.png" alt="this is a box of mac and cheese" width={200}/>
-				</Col>
-				<Col xs={6} md={2}>
-					<Image fluid src="carl-pic.png" alt="this is a box of mac and cheese" width={200}/>
-				</Col>
-				<Col xs={6} md={2}>
-					<Image fluid src="carl-pic.png" alt="this is a box of mac and cheese" width={200}/>
-				</Col>
-				<Col xs={6} md={2}>
-					<Image fluid src="carl-pic.png" alt="this is a box of mac and cheese" width={200}/>
-				</Col>
-				<Col xs={6} md={2}>
-					<Image fluid src="carl-pic.png" alt="this is a box of mac and cheese" width={200}/>
-				</Col>
-			</Row>
-		</Container>
-
-{/*This is the voting*/}
-	<Container fluid>
-		<h1 className="display-3 text-center py-4" style={{ color: 'rgb(167, 169, 190)'}}>Vote Here</h1>
+	<Container fluid className="text-center">
+		<h1 className="display-3 text-center py-4">Top 5</h1>
 		<Row className="justify-content-center">
-			{foodpics.map(foodpic => <CheeseyVote foodpic={foodpic} key={foodpic.foodpicid}/>)}
+			{foodpics.map(foodpic => <TopFiveFoodpics foodpic={foodpic} key={foodpic.foodpicid}/>)}
 		</Row>
 	</Container>
+
+{/*This is the voting*/}
+
 
 {/*This is the bottom message*/}
 	<Container fluid className="py-5 text-light">
