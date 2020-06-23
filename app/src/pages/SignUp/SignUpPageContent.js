@@ -8,7 +8,7 @@ import Image from 'react-bootstrap/Image'
 import {FormDebugger} from '../../shared/FormDebugger'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
-export const LogInPageContent = (props) => {
+export const SignUpPageContent = (props) => {
 
 	const {
 		status,

@@ -9,12 +9,12 @@ import Image from 'react-bootstrap/Image'
 import * as Yup from "yup";
 import {Formik} from "formik";
 
-import {LogInPageContent} from "./LogInPageContent";
+import {SignUpPageContent} from "./SignUpPageContent";
 import {httpConfig} from "../../shared/utils/http-config";
 
 // export function SignUp() {
 
-export const LogInPage = () => {
+export const SignUp = () => {
 	const signUp = {
 		profileName: "",
 		profileEmail: "",
@@ -63,7 +63,7 @@ export const LogInPage = () => {
 			onSubmit={submitSignUp}
 			validationSchema={validator}
 		>
-			{LogInPageContent}
+			{SignUpPageContent}
 		</Formik>
 
 	)
