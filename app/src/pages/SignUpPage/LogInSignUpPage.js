@@ -5,8 +5,8 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
-import { SignUpPageContent } from './SignUp/SignUpPageContent'
-// import { LogInContent} from './LogIn/LogInContent'
+import { SignUp } from './SignUp/SignUp'
+import { LogIn} from './LogIn/LogIn'
 
 export function LogInSignUp() {
 	return(
@@ -14,10 +14,10 @@ export function LogInSignUp() {
 			<Container fluid style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
 				<Row>
 					<Col>
-						<SignUpPageContent/>
+						<SignUp/>
 					</Col>
 					<Col>
-						{/*<LogInContent/>*/}
+						<LogIn/>
 					</Col>
 				</Row>
 			</Container>

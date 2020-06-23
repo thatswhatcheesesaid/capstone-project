@@ -9,8 +9,6 @@ import Image from 'react-bootstrap/Image'
 import {FormDebugger} from '../../shared/FormDebugger'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
-import {FormDebugger} from '../../../shared/FormDebugger'
-
 
 export const SignUpPageContent = (props) => {
 

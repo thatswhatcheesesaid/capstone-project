@@ -14,6 +14,8 @@ import {SignUp} from "./pages/SignUp/SignUp";
 import {AboutUsPage} from "./pages/AboutUsPage";
 import {PicturePage} from './pages/PicturePage'
 import {ResetPage} from './pages/ResetPage'
+import{LogInSignUp} from './pages/SignUpPage/LogInSignUpPage'
+// import { LogInSignUp } from './pages/SignUpPage/LogInSignUpPage'
 
 
 
@@ -33,6 +35,7 @@ const Routing = () => (
         <Route exact path="/aboutUs" component={AboutUsPage}/>
         <Route exact path="/cheesey" component={PicturePage}/>
         <Route exact path="/reset" component={ResetPage}/>
+        <Route exact path="/logInSignUp" component={LogInSignUp}/>
         <Route component={Home}/>
         <Route component={FourOhFour}/>
       </Switch>
