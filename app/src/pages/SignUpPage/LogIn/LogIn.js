@@ -46,7 +46,7 @@ export const LogIn = () => {
 	return (
 
 		<Formik
-			initialValues={logIn}
+			initialValues={LogIn}
 			onSubmit={submitSignIn}
 			validationSchema={validator}
 		>

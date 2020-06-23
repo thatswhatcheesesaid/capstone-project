@@ -147,10 +147,7 @@ return (
 			status && (<div className={status.type}>{status.message}</div>)
 		}
 
-
-
 	</>
-
 
 )
 };

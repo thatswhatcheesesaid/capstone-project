@@ -14,10 +14,10 @@ export function LogInSignUp() {
 			<Container fluid style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
 				<Row>
 					<Col style={{ color: 'rgb(167, 169, 190)'}}>
-						{SignUpPageContent}
+						<SignUpPageContent/>
 					</Col>
 					<Col>
-						{LogInContent}
+						<LogInContent/>
 					</Col>
 				</Row>
 			</Container>

@@ -89,8 +89,6 @@ export const LogInContent = (props) => {
 				status && (<div className={status.type}>{status.message}</div>)
 			}
 
-
-
 		</>
 	)
 }
