@@ -6,7 +6,7 @@ let streamifier = require('streamifier');
 cloudinary.config({
     api_key: process.env.CLOUDINARY_KEY,
     api_secret: process.env.CLOUDINARY_SECRET,
-    cloud_name: "thats-what-cheese-said"
+    cloud_name: "thatswhatcheesesaid"
 })
 
 export const uploadToCloudinary = (request : Request) : Promise<string>  => {

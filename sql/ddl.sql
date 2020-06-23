@@ -28,7 +28,7 @@ create TABLE restaurant(
 create TABLE foodpic(
     foodpicId           BINARY(16)   not null,
     foodpicProfileId    BINARY(16)   not null,
-    foodpicRestaurantId BINARY(16)   not null,
+    foodpicRestaurantId BINARY(16),
     foodpicCaption      VARCHAR (144) not null,
     foodpicUrl          VARCHAR(255) not null,
     index (foodpicProfileId),

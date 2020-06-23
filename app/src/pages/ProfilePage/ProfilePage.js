@@ -10,6 +10,8 @@ import Image from 'react-bootstrap/Image'
 import Form from 'react-bootstrap/Form'
 import { ImageDropZone } from './ImageDropZone'
 import { Formik } from 'formik'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { EditProfileForm } from './pictureUploadForm'
 
 //**Here is the inline styling for text and background
 //style={{ backgroundColor: 'rgb(255, 137, 6)' }} This is the navbar and footer
@@ -118,16 +120,10 @@ export function ProfilePage (props) {
 		<Row>
 			<Col className="py-5">
 				<h1 className="display-4 pb-3"><u>Upload Your Photo</u></h1>
-				<ImageDropZone
-					formikProps={{
-						values,
-						handleChange,
-						handleBlur,
-						setFieldValue,
-						fieldValue:"foodpicUrl"
-					}}
-				/>
+				<EditProfileForm/>
+
 			</Col>
+			<Col></Col>
 		</Row>
 
 	</Container>
