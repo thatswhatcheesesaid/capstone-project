@@ -6,10 +6,11 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
-import {CheeseyVote} from "./CheeseyVote";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchAllFoodpic} from "../../store/foodpic";
 import {TopFiveFoodpics} from "./TopFiveFoodpics";
+import {TwoRandomFoodpics} from "./TwoRandomFoodpics";
+import {fetchTopFiveFoodpic} from "../../store/topFivePic";
 // import Style from 'react-bootstrap/Style'
 
 //**Here is the inline styling for text and background
@@ -19,9 +20,10 @@ import {TopFiveFoodpics} from "./TopFiveFoodpics";
 
 export function PicturePage() {
 	const dispatch = useDispatch()
-	const foodpics = useSelector(store => store.foodpics ? store.foodpics : [])
+	const foodpics = useSelector(store => store.topFivePics ? store.topFivePics : [])
+	console.log(foodpics)
 	const sideEffects = () => {
-		dispatch(fetchAllFoodpic())
+		dispatch(fetchTopFiveFoodpic())
 	}
 console.log(foodpics)
 	React.useEffect(sideEffects, [])
@@ -63,7 +65,12 @@ console.log(foodpics)
 	</Container>
 
 {/*This is the voting*/}
-
+	<Container fluid>
+		<h1 className="display-3 text-center py-4">Vote Here</h1>
+		<Row className="justify-content-center">
+			{foodpics.map(foodpic => <TwoRandomFoodpics foodpic={foodpic} key={foodpic.foodpicid}/>)}
+		</Row>
+	</Container>
 
 {/*This is the bottom message*/}
 	<Container fluid className="py-5 text-light">

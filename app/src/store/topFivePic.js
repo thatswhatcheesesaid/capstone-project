@@ -17,3 +17,5 @@ export const fetchTopFiveFoodpic = () => async (dispatch) => {
 	const {data} = await httpConfig(`/apis/foodpic/topFive`)
 	dispatch(getTopFiveFoodpics(data))
 }
+
+export default slice.reducer
