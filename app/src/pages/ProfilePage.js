@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
+import Form from 'react-bootstrap/Form'
 
 
 //**Here is the inline styling for text and background
@@ -37,19 +38,17 @@ export function ProfilePage () {
 		</style>
 
 {/*This is the Body*/}
-<main style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
+<main className="text-white" style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
 
 {/*This is the jumbotron*/}
 	<Container fluid>
-		<h1 className="py-3 display-1" style={{ color: 'rgb(167, 169, 190)'}}>Profile</h1>
-			<Button variant="flat" className="mx-2">Upload your photo</Button>
-			<Button variant="flat" className="mx-2">Reset Password</Button>
+		<h1 className="py-3 display-1"><u>Profile</u></h1>
 	</Container>
 
 
 {/*This is the title*/}
 	<Container fluid>
-		<h1 className="display-3" style={{ color: 'rgb(167, 169, 190)'}}>Your Mac and Cheese Pictures</h1>
+		<h1 className="display-3 pt-5"><u>Your Mac and Cheese Pictures</u></h1>
 	</Container>
 {/*This is where the pictures live*/}
 	<Container fluid className="py-5">
@@ -99,6 +98,17 @@ export function ProfilePage () {
 			</Col>
 			<Col xs={6} md={4} lg={2}>
 			<Image fluid src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
+			</Col>
+		</Row>
+		<Row>
+			<Col className="py-5">
+				<h1 className="display-4"><u>Upload Your Photo</u></h1>
+				<Form className="pt-5">
+					<Form.File id="formcheck-api-regular">
+						<Form.File.Label>Upload Photo</Form.File.Label>
+						<Form.File.Input />
+					</Form.File>
+				</Form>
 			</Col>
 		</Row>
 

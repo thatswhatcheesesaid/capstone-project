@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux'
 import restaurants from "./restaurant"
-import foodpics from "./foodpic"
+import topFivePics from "./topFivePic"
 
-export default combineReducers({foodpics, restaurants})
+export default combineReducers({restaurants, topFivePics})

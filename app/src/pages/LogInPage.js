@@ -11,9 +11,9 @@ export function LogInPage() {
 	return (
 		<>
 
-			<Container fluid style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
+			<Container fluid className="text-white" style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
 				<Row>
-					<Col style={{ color: 'rgb(167, 169, 190)'}}>
+					<Col>
 						<h1>Create a new account</h1>
 						<Form>
 							<Form.Group controlId="username">
@@ -49,7 +49,7 @@ export function LogInPage() {
 							</Button>
 						</Form>
 					</Col>
-					<Col style={{ color: 'rgb(167, 169, 190)'}}>
+					<Col className="text-center">
 						<h1>Log in</h1>
 						<Form>
 							<Form.Group controlId="formBasicEmail"></Form.Group>
@@ -62,7 +62,7 @@ export function LogInPage() {
 								<Form.Control type="password" placeholder="Enter password"/>
 							</Form.Group>
 
-							<Button variant="primary" type="submit">
+							<Button variant="primary" className="mx-2" type="submit">
 								Enter
 							</Button>
 
@@ -70,7 +70,7 @@ export function LogInPage() {
 								Forgot password?
 							</Button>
 						</Form>
-						<Image className={'py-3'} src='BlueBox.jpg' width={300} rounded/>
+						<Image className="py-3" src="twcs-logo-white.png" width={300} rounded/>
 					</Col>
 				</Row>
 			</Container>

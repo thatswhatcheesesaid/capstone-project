@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button'
 import {useDispatch, useSelector} from "react-redux";
 import {fetchAllFoodpic} from "../../store/foodpic";
 import {TopFiveFoodpics} from "./TopFiveFoodpics";
+import { fetchTopFiveFoodpic } from '../../store/topFivePic'
 // import Style from 'react-bootstrap/Style'
 
 //**Here is the inline styling for text and background
@@ -18,11 +19,12 @@ import {TopFiveFoodpics} from "./TopFiveFoodpics";
 
 export function PicturePage() {
 	const dispatch = useDispatch()
-	const foodpics = useSelector(store => store.foodpics ? store.foodpics : [])
+	const topFivePics = useSelector(store => store.topFivePics ? store.topFivePics : [])
 	const sideEffects = () => {
 		dispatch(fetchAllFoodpic())
+		dispatch(fetchTopFiveFoodpic())
 	}
-	console.log(foodpics)
+	console.log(topFivePics)
 	React.useEffect(sideEffects, [])
 	return(
 	<>
@@ -46,7 +48,7 @@ export function PicturePage() {
 
 
 {/*This is the body of the page*/}
-		<main className="text-white">
+		<main style={{ backgroundColor: 'rgb(15, 14, 23)' }} className="text-white">
 
 {/*This is the title*/}
 		<Container fluid className="text-center py-5">
@@ -57,7 +59,7 @@ export function PicturePage() {
 			<Container fluid className="text-center">
 				<h1 className="display-3 text-center py-4">Top 5</h1>
 				<Row className="justify-content-center">
-					{foodpics.map(foodpic => <TopFiveFoodpics foodpic={foodpic} key={foodpic.foodpicid} />)}
+					{topFivePics.map(foodpic => <TopFiveFoodpics foodpic={foodpic} key={foodpic.foodpicid} />)}
 				</Row>
 			</Container>
 
@@ -78,7 +80,7 @@ export function PicturePage() {
 	<Container fluid className="pb-5 text-light">
 		<Row>
 			<Col className="text-center">
-				<Button variant="flat"><strong>Upload your picture</strong></Button>
+				<Button variant="flat" href="/profile"><strong>Upload your picture</strong></Button>
 			</Col>
 		</Row>
 	</Container>

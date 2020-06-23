@@ -46,7 +46,7 @@ export const RestaurantPage = () => {
           <Row>
             <Col className="text-center">
               <p>Did we miss your favorite? Send us a line and we'll put it on the list!</p>
-              <Button className="mx-3">Submit Restaurant</Button>
+              <Button className="mx-3" href="aboutUs">Submit Restaurant</Button>
             </Col>
           </Row>
         </Container>
