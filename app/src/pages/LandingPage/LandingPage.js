@@ -53,13 +53,13 @@ export const LandingPage = () => {
           <Row>
             <Col className="text-center">
               <Button className="mb-5" href="/restaurants">Rank the Best Restaurants Now!</Button>
-              <p>Did we miss the best Mac in ABQ? <br /><a href="#"><u>Click Here</u></a> to submit a new Restaurant!</p>
+              <p>Did we miss the best Mac in ABQ? <br /><a href="/aboutUs"><u>Click Here</u></a> to submit a new Restaurant!</p>
             </Col>
           </Row>
         </Container>
         <Container className="my-5">
           <Row>
-            <Col className="text-center display-4"><u>Cheesiest Pictures of your Life</u></Col>
+            <Col className="text-center display-4"><u>Cheesiest of the Cheesiest Pictures</u></Col>
           </Row>
         </Container>
         <Container className="text-center" fluid>
@@ -71,7 +71,7 @@ export const LandingPage = () => {
           <Row>
             <Col className="text-center">
               <Button className="mb-5" href="/cheesey">Vote for the Cheesiest Pic Now!</Button>
-              <p>How Cheesy is your Mac?<br /><a href="#"><u>Post a pic</u></a> and put it up against<br /> the rest!</p>
+              <p>How Cheesy is your Mac?<br /><a href="/profile"><u>Post a pic</u></a> and put it up against<br /> the rest!</p>
             </Col>
           </Row>
         </Container>

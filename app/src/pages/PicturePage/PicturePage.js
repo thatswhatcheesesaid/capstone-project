@@ -30,20 +30,20 @@ export function PicturePage() {
 	<>
 
 {/*here are the button colors*/}
-<style type ='text/css'>
-	{`
-		.btn-flat {
-		background-color: rgb(255, 137, 6);
-		color: black;
-		}
-	
-	.btn-rigid {
-	background-color: rgb(15, 14, 23);
-	color: white;
-	}
-	
-	`}
-</style>
+{/*<style type ='text/css'>*/}
+{/*	{`*/}
+{/*		.btn-flat {*/}
+{/*		background-color: rgb(255, 137, 6);*/}
+{/*		color: black;*/}
+{/*		}*/}
+{/*	*/}
+{/*	.btn-rigid {*/}
+{/*	background-color: rgb(15, 14, 23);*/}
+{/*	color: white;*/}
+{/*	}*/}
+{/*	*/}
+{/*	`}*/}
+{/*</style>*/}
 
 
 
@@ -52,14 +52,14 @@ export function PicturePage() {
 
 {/*This is the title*/}
 		<Container fluid className="text-center py-5">
-			<h1 className="display-1">Mac and Cheese</h1>
+			<h1 className="display-1"><u>Mac and Cheese</u></h1>
 		</Container>
 
 {/*This is the top 5 pics*/}
 			<Container fluid className="text-center">
 				<h1 className="display-3 text-center py-4">Top 5</h1>
 				<Row className="justify-content-center">
-					{topFivePics.map(foodpic => <TopFiveFoodpics foodpic={foodpic} key={foodpic.foodpicid} />)}
+					{topFivePics.map((foodpic, index) => <TopFiveFoodpics foodpic={foodpic} key={foodpic.foodpicid} rank={index+1} />)}
 				</Row>
 			</Container>
 
@@ -70,7 +70,7 @@ export function PicturePage() {
 	<Container fluid className="py-5 text-light">
 		<Row>
 			<Col>
-				<h1 className="text-center"><strong>Vote on the cheesiest pictures. Each click will shuffle new pictures for more votes.</strong></h1>
+				<h1 className="text-center display-4">Vote on the cheesiest pictures. Each click will shuffle new pictures for more votes.</h1>
 			</Col>
 		</Row>
 	</Container>
@@ -80,7 +80,7 @@ export function PicturePage() {
 	<Container fluid className="pb-5 text-light">
 		<Row>
 			<Col className="text-center">
-				<Button variant="flat" href="/profile"><strong>Upload your picture</strong></Button>
+				<Button href="/profile"><strong>Upload your picture</strong></Button>
 			</Col>
 		</Row>
 	</Container>
