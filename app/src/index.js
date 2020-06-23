@@ -10,15 +10,12 @@ import {LandingPage} from './pages/LandingPage'
 import {ProfilePage} from './pages/ProfilePage'
 import {StaticNavbar} from './pages/StaticNavbar'
 import {RestaurantPage} from './pages/RestaurantPage'
-import {LogInPage} from "./pages/LogInPage/LogInPage";
+import {LogInSignUp} from "./pages/SignUpPage/LogInSignUpPage";
 import {AboutUsPage} from "./pages/AboutUsPage";
 import {PicturePage} from './pages/PicturePage'
 import {ResetPage} from './pages/ResetPage'
 
-// import reducer from "./store"
-import { Provider } from 'react-redux'
 
-// const store = configureStore({reducer})
 
 const Routing = () => (
   <>
@@ -32,7 +29,7 @@ const Routing = () => (
         <Route exact path="/" component={LandingPage}/>
         <Route exact path="/profile" component={ProfilePage}/>
         <Route exact path="/restaurants" component={RestaurantPage}/>
-        <Route exact path="/logIn" component={LogInPage}/>
+        <Route exact path="/logInSignUp" component={LogInSignUp}/>
         <Route exact path="/aboutUs" component={AboutUsPage}/>
         <Route exact path="/cheesey" component={PicturePage}/>
         <Route exact path="/reset" component={ResetPage}/>
