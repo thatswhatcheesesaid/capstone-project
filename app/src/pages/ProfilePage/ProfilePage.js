@@ -8,7 +8,8 @@ import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
 import Form from 'react-bootstrap/Form'
-
+import { ImageDropZone } from './ImageDropZone'
+import { Formik } from 'formik'
 
 //**Here is the inline styling for text and background
 //style={{ backgroundColor: 'rgb(255, 137, 6)' }} This is the navbar and footer
@@ -102,13 +103,16 @@ export function ProfilePage () {
 		</Row>
 		<Row>
 			<Col className="py-5">
-				<h1 className="display-4"><u>Upload Your Photo</u></h1>
-				<Form className="pt-5">
-					<Form.File id="formcheck-api-regular">
-						<Form.File.Label>Upload Photo</Form.File.Label>
-						<Form.File.Input />
-					</Form.File>
-				</Form>
+				<h1 className="display-4 pb-3"><u>Upload Your Photo</u></h1>
+				<ImageDropZone
+					formikProps={{
+						values,
+						handleChange,
+						handleBlur,
+						setFieldValue,
+						fieldValue:"foodpicUrl"
+					}}
+				/>
 			</Col>
 		</Row>
 

@@ -7,7 +7,7 @@ import {FourOhFour} from "./pages/FourOhFour";
 import {Home} from "./pages/Home";
 import { Footer } from './pages/Footer';
 import {LandingPage} from './pages/LandingPage/LandingPage'
-import {ProfilePage} from './pages/ProfilePage'
+import {ProfilePage} from './pages/ProfilePage/ProfilePage'
 import {StaticNavbar} from './pages/StaticNavbar'
 import {RestaurantPage} from './pages/RestaurantPage/RestaurantPage'
 import {LogInPage} from "./pages/LogInPage";

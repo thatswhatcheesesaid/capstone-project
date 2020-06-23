@@ -11,6 +11,7 @@ import {CheeseyRoute} from "./routes/cheesey.route";
 import{SignInRouter} from "./routes/sign-in.route"
 import {passportMiddleware} from "./controllers/sign-in.controller";
 import passport from "passport";
+import {ImageUploadRouter} from "./routes/pictureUpload.route";
 const cookieParser = require('cookie-parser')
 const session = require("express-session")
 const MemoryStore = require ("memorystore")(session)
@@ -67,6 +68,7 @@ export class App {
         this.app.use("/apis", indexRoutes);
         this.app.use("/apis/cheesey", CheeseyRoute)
         this.app.use("/apis/sign-in", SignInRouter)
+        this.app.use("/apis/image-upload", ImageUploadRouter)
 
     }
 
