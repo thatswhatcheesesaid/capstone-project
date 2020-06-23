@@ -7,6 +7,7 @@ import {Status} from "../../utils/interfaces/status";
 import {insertProfile} from "../../utils/profile/insertProfile";
 import MailComposer from "nodemailer/lib/mail-composer";
 const mailgun = require("mailgun-js")
+import { v1 as uuidv1 } from 'uuid';
 
 export async function signupProfileController (request: Request, response: Response) {
     try {
@@ -30,7 +31,7 @@ export async function signupProfileController (request: Request, response: Respo
         }
 
         const profile: Profile = {
-            profileId: null,
+            profileId: uuidv1(),
             profileActivationToken,
             profileEmail,
             profileHash,

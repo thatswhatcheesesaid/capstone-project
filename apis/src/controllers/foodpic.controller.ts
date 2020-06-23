@@ -50,3 +50,17 @@ export async function getAllFoodpicsController(request: Request, response: Respo
 		console.log(error)
 	}
 }
+
+export async function getTopFiveFoodpicsController(request: Request, response: Response, nextFunction: NextFunction) {
+	try {
+		const reply = await selectAllFoodpics()
+		const handleReply = (reply: any[]) => reply.splice(0,5)
+		const data = reply ? handleReply(reply) : []
+		const status: Status = {status: 200, data:data, message: null}
+		return response.json(status)
+	}catch(error) {
+		console.log(error)
+	}
+}
+
+

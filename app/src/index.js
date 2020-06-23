@@ -6,22 +6,30 @@ import {Route, Switch} from "react-router";
 import {FourOhFour} from "./pages/FourOhFour";
 import {Home} from "./pages/Home";
 import { Footer } from './pages/Footer';
-import {LandingPage} from './pages/LandingPage'
-import {ProfilePage} from './pages/ProfilePage'
+import {LandingPage} from './pages/LandingPage/LandingPage'
+import {ProfilePage} from './pages/ProfilePage/ProfilePage'
 import {StaticNavbar} from './pages/StaticNavbar'
-import {RestaurantPage} from './pages/RestaurantPage'
 import {SignUp} from "./pages/SignUp/SignUp";
+import {RestaurantPage} from './pages/RestaurantPage/RestaurantPage'
 import {AboutUsPage} from "./pages/AboutUsPage";
-import {PicturePage} from './pages/PicturePage'
+import {PicturePage} from './pages/PicturePage/PicturePage'
 import {ResetPage} from './pages/ResetPage'
 import{LogInSignUp} from './pages/SignUpPage/LogInSignUpPage'
-// import { LogInSignUp } from './pages/SignUpPage/LogInSignUpPage'
+
+import reducer from "./store"
+import { Provider } from 'react-redux'
+import { configureStore } from '@reduxjs/toolkit'
 
 
+
+
+
+const store = configureStore({reducer})
 
 const Routing = () => (
-  <>
 
+  <>
+    <Provider store={store}>
     <React.StrictMode>
       <StaticNavbar/>
     </React.StrictMode>
@@ -47,6 +55,7 @@ const Routing = () => (
     </React.StrictMode>
 
 
-  </>
+    </Provider>
+    </>
 );
-ReactDOM.render(<Routing/>, document.querySelector('#root'));
+ReactDOM.render(Routing(store), document.querySelector('#root'));
