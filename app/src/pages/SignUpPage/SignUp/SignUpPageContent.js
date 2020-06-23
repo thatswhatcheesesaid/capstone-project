@@ -5,12 +5,12 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
-
+<<<<<<< HEAD:app/src/pages/SignUp/SignUpPageContent.js
 import {FormDebugger} from '../../shared/FormDebugger'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-
+=======
 import {FormDebugger} from '../../../shared/FormDebugger'
-
+>>>>>>> refs/remotes/origin/profileRedux:app/src/pages/SignUpPage/SignUp/SignUpPageContent.js
 
 export const SignUpPageContent = (props) => {
 

@@ -15,10 +15,7 @@ import {AboutUsPage} from "./pages/AboutUsPage";
 import {PicturePage} from './pages/PicturePage'
 import {ResetPage} from './pages/ResetPage'
 
-// import reducer from "./store"
-import { Provider } from 'react-redux'
 
-// const store = configureStore({reducer})
 
 const Routing = () => (
   <>
