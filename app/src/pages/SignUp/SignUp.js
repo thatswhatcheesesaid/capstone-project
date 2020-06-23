@@ -12,7 +12,7 @@ import {Formik} from "formik";
 import {LogInPageContent} from "./LogInPageContent";
 import {httpConfig} from "../../shared/utils/http-config";
 
-// export function LogInPage() {
+// export function SignUp() {
 
 export const LogInPage = () => {
 	const signUp = {

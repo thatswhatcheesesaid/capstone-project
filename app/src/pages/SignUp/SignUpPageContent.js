@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import {FormDebugger} from '../../shared/FormDebugger'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 export const LogInPageContent = (props) => {
 
@@ -22,77 +23,6 @@ export const LogInPageContent = (props) => {
 		handleReset
 	} = props;
 
-// return (
-// 	<>
-//
-// 		<Container fluid style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
-// 			<Row>
-// 				<Col style={{ color: 'rgb(167, 169, 190)'}}>
-// 					<h1>Create a new account</h1>
-//
-// 					<Form>
-// 						<Form.Group controlId="username">
-// 							<Form.Label>Username:</Form.Label>
-// 							<Form.Control type="username" placeholder="Enter username"/>
-// 						</Form.Group>
-//
-// 						<Form.Group controlId="newEmail">
-// 							<Form.Label>Email address:</Form.Label>
-// 							<Form.Control type="email" placeholder="Enter email"/>
-// 						</Form.Group>
-//
-// 						<Form.Group controlId="newEmailConformation">
-// 							<Form.Label>Confirm email address:</Form.Label>
-// 							<Form.Control type="email" placeholder="Retype email"/>
-// 						</Form.Group>
-//
-// 						<Form.Group controlId="newPassword">
-// 							<Form.Label>Password:</Form.Label>
-// 							<Form.Control type="password" placeholder="Password"/>
-// 						</Form.Group>
-//
-// 						<Form.Group controlId="newPasswordConformation">
-// 							<Form.Label>Confirm password:</Form.Label>
-// 							<Form.Control type="password" placeholder="Retype password"/>
-// 						</Form.Group>
-//
-// 						<Button variant="primary" type="submit">
-// 							Submit
-// 						</Button>
-// 						<Button variant="primary" type="submit">
-// 							Captcha
-// 						</Button>
-// 					</Form>
-// 				</Col>
-// 				<Col style={{ color: 'rgb(167, 169, 190)'}}>
-// 					<h1>Log in</h1>
-// 					<Form>
-// 						<Form.Group controlId="formBasicEmail"></Form.Group>
-//
-// 						<Form.Label>Email address:</Form.Label>
-// 						<Form.Control type="email" placeholder="Enter email"/>
-//
-// 						<Form.Group controlId="formBasicPassword">
-// 							<Form.Label>Password:</Form.Label>
-// 							<Form.Control type="password" placeholder="Enter password"/>
-// 						</Form.Group>
-//
-// 						<Button variant="primary" type="submit">
-// 							Enter
-// 						</Button>
-//
-// 						<Button variant="primary" type="submit">
-// 							Forgot password?
-// 						</Button>
-// 					</Form>
-// 					<Image className={'py-3'} src='BlueBox.jpg' width={300} rounded/>
-// 				</Col>
-// 			</Row>
-// 		</Container>
-//
-// 	</>
-// )}
-
 return (
 	<>
 
@@ -105,6 +35,11 @@ return (
 		<div className="form-group">
 			<label htmlFor="profileName">Profile name</label>
 			<div className="input-group">
+				<div className="input-group-prepend">
+					<div className="input-group-text">
+						<FontAwesomeIcon icon="user-circle"/>
+					</div>
+				</div>
 				<input
 					className="form-control"
 					name="profileName"
@@ -129,6 +64,11 @@ return (
 			<div className="form-group">
 				<label htmlFor="profileEmail">Email Address</label>
 				<div className="input-group">
+					<div className="input-group-prepend">
+						<div className="input-group-text">
+							<FontAwesomeIcon icon="envelope"/>
+						</div>
+					</div>
 					<input
 						className="form-control"
 						id="profileEmail"
@@ -152,6 +92,11 @@ return (
 			<div className="form-group">
 				<label htmlFor="profileEmailConfirm">Confirm Your Email Address</label>
 				<div className="input-group">
+					<div className="input-group-prepend">
+						<div className="input-group-text">
+							<FontAwesomeIcon icon="envelope"/>
+						</div>
+					</div>
 					<input
 						className="form-control"
 						type="email"
@@ -171,6 +116,11 @@ return (
 			<div className="form-group">
 				<label htmlFor="profilePassword">Password</label>
 				<div className="input-group">
+					<div className="input-group-prepend">
+						<div className="input-group-text">
+							<FontAwesomeIcon icon="key"/>
+						</div>
+					</div>
 					<input
 						id="profilePassword"
 						className="form-control"
@@ -189,6 +139,11 @@ return (
 			<div className="form-group">
 				<label htmlFor="profilePasswordConfirm">Confirm Your Password</label>
 				<div className="input-group">
+					<div className="input-group-prepend">
+						<div className="input-group-text">
+							<FontAwesomeIcon icon="key"/>
+						</div>
+					</div>
 					<input
 						className="form-control"
 						type="password"
