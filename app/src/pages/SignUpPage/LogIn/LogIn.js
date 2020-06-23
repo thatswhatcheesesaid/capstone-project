@@ -28,7 +28,7 @@ export const LogIn = () => {
 			.min(8, "Password must have at least eight characters"),
 	});
 
-	const submitSignIn = (values, {resetForm, setStatus}) => {
+	const submitLogIn = (values, {resetForm, setStatus}) => {
 
 		httpConfig.post("/apis/sign-in/", values)
 			.then(reply => {
@@ -47,7 +47,7 @@ export const LogIn = () => {
 
 		<Formik
 			initialValues={LogIn}
-			onSubmit={submitSignIn}
+			onSubmit={submitLogIn}
 			validationSchema={validator}
 		>
 			{LogInContent}
