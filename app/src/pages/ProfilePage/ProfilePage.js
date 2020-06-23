@@ -1,7 +1,7 @@
 import React from "react"
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
-// import Image from 'react-bootstrap/Image'
+//import Image from 'react-bootstrap/Image'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
@@ -16,7 +16,21 @@ import { Formik } from 'formik'
 //style={{ backgroundColor: 'rgb(15, 14, 23)' }} This is for the body
 //style={{ color: 'rgb(167, 169, 190)'}} This is for the text
 
-export function ProfilePage () {
+export function ProfilePage (props) {
+
+	const {
+		setFieldValue,
+		status,
+		values,
+		errors,
+		touched,
+		dirty,
+		isSubmitting,
+		handleChange,
+		handleBlur,
+		handleSubmit,
+		handleReset
+	} = props;
 
 	return (
 
