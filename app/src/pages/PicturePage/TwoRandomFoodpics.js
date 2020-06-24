@@ -10,6 +10,7 @@ export function TwoRandomFoodpics({foodpic}) {
 		<>
 			<Col className="pr-5 text-center">
 				<Image fluid width={400} src={foodpic.foodpicUrl} alt={foodpic.foodpicCaption}/>
+				<p>{foodpic.foodpicCaption}</p>
 				<Button variant='flat'><strong>Cheesey</strong></Button>
 			</Col>
 		</>
