@@ -13,9 +13,9 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 export function AboutUsPage() {
 	return (
 		<>
-			<Container fluid className="text-center py-5" style={{backgroundColor: 'rgb(15, 14, 23)'}}>
+			<Container fluid className="text-center text-white py-5" style={{backgroundColor: 'rgb(15, 14, 23)'}}>
 				<Row>
-					<Col style={{color: 'rgb(167, 169, 190)'}}>
+					<Col>
 
 						{/* This is the About us section */}
 
@@ -33,7 +33,7 @@ export function AboutUsPage() {
 
 				{/* This is the contact form */}
 
-				<h1 style={{color: 'rgb(167, 169, 190)'}}>Contact</h1>
+				<h1>Contact</h1>
 				<Row>
 					<Col style={{color: 'rgb(167, 169, 190)'}}>
 						<Form>
