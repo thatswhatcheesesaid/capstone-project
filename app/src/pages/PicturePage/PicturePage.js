@@ -56,15 +56,7 @@ export function PicturePage() {
 			<h1 className="display-1"><u>Mac and Cheese</u></h1>
 		</Container>
 
-{/*This is the top 5 pics*/}
-			<Container fluid className="text-center">
-				<h1 className="display-3 text-center py-4">Top 5</h1>
-				<Row className="justify-content-center">
-					{topFivePics.map((foodpic, index) => <TopFiveFoodpics foodpic={foodpic} key={foodpic.foodpicid} rank={index+1} />)}
-				</Row>
-			</Container>
-
-{/*This is the voting*/}
+			{/*This is the voting*/}
 			<Container fluid>
 				<h1 className="display-3 text-center py-4">Vote Here</h1>
 				<Row className="justify-content-center">
@@ -73,6 +65,14 @@ export function PicturePage() {
 							<RandomFoodpic foodpic={foodpics[0]} key={foodpics[0].foodpicId}/>
 							<RandomFoodpic foodpic={foodpics[1]} key={foodpics[1].foodpicId}/>
 						</>)}
+				</Row>
+			</Container>
+
+{/*This is the top 5 pics*/}
+			<Container fluid className="text-center">
+				<h1 className="display-3 text-center py-4">Top 5</h1>
+				<Row className="justify-content-center">
+					{topFivePics.map((foodpic, index) => <TopFiveFoodpics foodpic={foodpic} key={foodpic.foodpicid} rank={index+1} />)}
 				</Row>
 			</Container>
 

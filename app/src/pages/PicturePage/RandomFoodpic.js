@@ -35,7 +35,7 @@ console.log(foodpic)
 			<Col className="pr-5 text-center">
 				<Image fluid width={400} height={400} src={foodpic.foodpicUrl} alt={foodpic.foodpicCaption}/>
 				<p>{foodpic.foodpicCaption}</p>
-				<Button onClick={submitCheesey} variant='flat'><strong>Cheesey</strong></Button>
+				<Button onClick={submitCheesey}><strong>Cheesey</strong></Button>
 			</Col>
 		</>
 	)

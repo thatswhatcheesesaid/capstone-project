@@ -27,6 +27,7 @@ export function StaticNavbar () {
 					<Button className="m-2" ><Nav.Link href="/restaurants">Restaurants</Nav.Link></Button>
 					<Button className="m-2"><Nav.Link href="/cheesey">Pictures</Nav.Link></Button>
 					<Button className="m-2"><Nav.Link href="/logInSignUp">Log In</Nav.Link></Button>
+					<Button className="m-2"><Nav.Link href="/profile">Profile</Nav.Link></Button>
 					<Button className="m-2"><Nav.Link href="/aboutUs">About Us</Nav.Link></Button>
 				</Nav>
 			</Navbar.Collapse>
