@@ -10,8 +10,8 @@ export function TopFiveFoodpics({foodpic}) {
 				<Card className="border-0 bg-transparent">
 					<Card.Img variant="top" src="blue-box.jpg" alt="Blue Box Mac" />
 					<Card.Body>
-						<Card.Title><p>Picture</p></Card.Title>
-						<Card.Text><p>Score</p></Card.Text>
+						<Card.Title>Picture</Card.Title>
+						<Card.Text>Score</Card.Text>
 					</Card.Body>
 				</Card>
 			</Col>

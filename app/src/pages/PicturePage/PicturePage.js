@@ -6,11 +6,11 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
-import {useDispatch, useSelector} from "react-redux";
-import {fetchAllFoodpic} from "../../store/foodpic";
-import {TopFiveFoodpics} from "./TopFiveFoodpics";
-import {TwoRandomFoodpics} from "./TwoRandomFoodpics";
-import {fetchTopFiveFoodpic} from "../../store/topFivePic";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAllFoodpic } from "../../store/foodpic";
+import { TopFiveFoodpics } from "./TopFiveFoodpics";
+import { TwoRandomFoodpics } from "./TwoRandomFoodpics";
+import { fetchTopFiveFoodpic } from "../../store/topFivePic";
 // import Style from 'react-bootstrap/Style'
 
 //**Here is the inline styling for text and background
@@ -18,21 +18,23 @@ import {fetchTopFiveFoodpic} from "../../store/topFivePic";
 //style={{ backgroundColor: 'rgb(15, 14, 23)' }} This is for the body
 //style={{ color: 'rgb(167, 169, 190)'}} This is for the text
 
-export function PicturePage() {
+export function PicturePage () {
 	const dispatch = useDispatch()
-	const foodpics = useSelector(store => store.topFivePics ? store.topFivePics : [])
-	console.log(foodpics)
+	const topFiveFoodpics = useSelector(store => store.topFivePics ? store.topFivePics : [])
+	const foodpics = useSelector(store => store.foodpics ? store.foodpics : [])
+	console.log("foodpics from redux", foodpics[0])
 	const sideEffects = () => {
 		dispatch(fetchTopFiveFoodpic())
+		dispatch(fetchAllFoodpic())
 	}
-console.log(foodpics)
-	React.useEffect(sideEffects, [])
-	return(
-	<>
 
-{/*here are the button colors*/}
-<style type ='text/css'>
-	{`
+	React.useEffect(sideEffects, [])
+	return (
+		<>
+
+			{/*here are the button colors*/}
+			<style type='text/css'>
+				{`
 		.btn-flat {
 		background-color: rgb(255, 137, 6);
 		color: black;
@@ -44,55 +46,60 @@ console.log(foodpics)
 	}
 	
 	`}
-</style>
+			</style>
 
 
+			{/*This is the body of the page*/}
+			<main style={{backgroundColor: 'rgb(15, 14, 23)'}} className="text-white">
 
-{/*This is the body of the page*/}
-<main style={{ backgroundColor: 'rgb(15, 14, 23)' }} className="text-white">
+				{/*This is the title*/}
+				<Container fluid className="text-center py-5">
+					<h1 className="display-1">Mac and Cheese</h1>
+				</Container>
 
-{/*This is the title*/}
-		<Container fluid className="text-center py-5">
-			<h1 className="display-1">Mac and Cheese</h1>
-		</Container>
+				{/*This is the top 5 pics*/}
+				<Container fluid className="text-center">
+					<h1 className="display-3 text-center py-4">Top 5</h1>
+					<Row className="justify-content-center">
+						{topFiveFoodpics.map(foodpic => <TopFiveFoodpics foodpic={foodpic} key={foodpic.foodpicId}/>)}
+					</Row>
+				</Container>
 
-{/*This is the top 5 pics*/}
-	<Container fluid className="text-center">
-		<h1 className="display-3 text-center py-4">Top 5</h1>
-		<Row className="justify-content-center">
-			{foodpics.map(foodpic => <TopFiveFoodpics foodpic={foodpic} key={foodpic.foodpicid}/>)}
-		</Row>
-	</Container>
+				{/*This is the voting*/}
+				<Container fluid>
+					<h1 className="display-3 text-center py-4">Vote Here</h1>
+					<Row className="justify-content-center">
+						{foodpics.length > 2 && (
+						<>
+							<TwoRandomFoodpics foodpic={foodpics[0]} key={foodpics[0].foodpicid}/>
+						<TwoRandomFoodpics foodpic={foodpics[1]} key={foodpics[1].foodpicid}/>
+						</>)}
+					</Row>
+				</Container>
 
-{/*This is the voting*/}
-	<Container fluid>
-		<h1 className="display-3 text-center py-4">Vote Here</h1>
-		<Row className="justify-content-center">
-			{foodpics.map(foodpic => <TwoRandomFoodpics foodpic={foodpic} key={foodpic.foodpicid}/>)}
-		</Row>
-	</Container>
-
-{/*This is the bottom message*/}
-	<Container fluid className="py-5 text-light">
-		<Row>
-			<Col>
-				<h1 className="text-center"><strong>Vote on the cheesiest pictures. Each click will shuffle new pictures for more votes.</strong></h1>
-			</Col>
-		</Row>
-	</Container>
+				{/*This is the bottom message*/}
+				<Container fluid className="py-5 text-light">
+					<Row>
+						<Col>
+							<h1 className="text-center"><strong>Vote on the cheesiest pictures. Each click will shuffle new pictures
+								for more votes.</strong></h1>
+						</Col>
+					</Row>
+				</Container>
 
 
-{/*This is the upload button*/}
-	<Container fluid className="pb-5 text-light">
-		<Row>
-			<Col className="text-center">
-				<Button variant="flat"><strong>Upload your picture</strong></Button>
-			</Col>
-		</Row>
-	</Container>
+				{/*This is the upload button*/}
+				<Container fluid className="pb-5 text-light">
+					<Row>
+						<Col className="text-center">
+							<Button variant="flat"><strong>Upload your picture</strong></Button>
+						</Col>
+					</Row>
+				</Container>
 
-</main>
+			</main>
 
 
 		</>
-	)}
+	)
+}
