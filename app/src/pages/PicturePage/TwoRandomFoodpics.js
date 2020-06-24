@@ -13,6 +13,10 @@ export function TwoRandomFoodpics({foodpic}) {
 	const dispatch = useDispatch()
 
 	const submitCheesey = () => {
+		// const cheesey = {
+		// 	cheeseyFoodpicId: "",
+		// 	cheeseyScore: 1,
+		// }
 		dispatch(shiftFoodpic(foodpic))
 		// httpConfig.post("/apis/cheesey", cheesey).then(reply => {
 		// 	let {message, type} = reply
