@@ -20,16 +20,11 @@ import reducer from "./store"
 import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
 
-
-
-
-
 const store = configureStore({reducer})
 
 const Routing = () => (
-
   <>
-    <Provider store={store}>
+   <Provider store={store}>
     <React.StrictMode>
       <StaticNavbar/>
     </React.StrictMode>

@@ -7,8 +7,8 @@ const slice = createSlice({
   reducers: {
     getTopFiveFoodpics : (posts, action) =>{
       return action.payload
-    }
-  }
+		}
+	}
 })
 
 export const {getTopFiveFoodpics} = slice.actions

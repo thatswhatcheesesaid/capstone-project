@@ -64,3 +64,15 @@ export async function getTopFiveFoodpicsController(request: Request, response: R
 }
 
 
+export async function getTwoRandomFoodpicsController (request: Request, response: Response, nextFunction: NextFunction) {
+	try {
+		const reply = await selectAllFoodpics()
+		//randomizing function needed
+		const handleReply = (reply: any[]) => reply.splice(0,2)
+		const data = reply ? handleReply(reply) : []
+		const status: Status = {status: 200, data:data, message: null}
+		return response.json(status)
+	}catch(error) {
+		console.log(error)
+	}
+}
