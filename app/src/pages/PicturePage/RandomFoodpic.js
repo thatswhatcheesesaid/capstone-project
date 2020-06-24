@@ -7,12 +7,14 @@ import { useDispatch } from 'react-redux'
 // import { AxiosInstance as httpConfig } from 'axios'
 // import Card from "react-bootstrap/Card";
 // import Row from "react-bootstrap/Row";
-import {httpConfig} from "../..//utils/http-config";
+import {httpConfig} from "../../utils/http-config";
 
-export function TwoRandomFoodpics({foodpic}) {
-
+export function RandomFoodpic(props) {
+	const {foodpic} = props
+console.log(foodpic)
 	const dispatch = useDispatch()
 	const cheesey = {
+		cheeseyProfileId: null,
 		cheeseyFoodpicId: foodpic.foodpicId,
 		cheeseyScore: 1,
 	}
@@ -31,7 +33,7 @@ export function TwoRandomFoodpics({foodpic}) {
 	return (
 		<>
 			<Col className="pr-5 text-center">
-				<Image fluid width={400} src={foodpic.foodpicUrl} alt={foodpic.foodpicCaption}/>
+				<Image fluid width={400} height={400} src={foodpic.foodpicUrl} alt={foodpic.foodpicCaption}/>
 				<p>{foodpic.foodpicCaption}</p>
 				<Button onClick={submitCheesey} variant='flat'><strong>Cheesey</strong></Button>
 			</Col>

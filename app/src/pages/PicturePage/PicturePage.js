@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button'
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllFoodpic } from "../../store/foodpic";
 import { TopFiveFoodpics } from "./TopFiveFoodpics";
-import { TwoRandomFoodpics } from "./TwoRandomFoodpics";
+import { RandomFoodpic } from "./RandomFoodpic";
 import { fetchTopFiveFoodpic } from "../../store/topFivePic";
 // import Style from 'react-bootstrap/Style'
 
@@ -71,8 +71,8 @@ export function PicturePage () {
 					<Row className="justify-content-center">
 						{foodpics.length > 2 && (
 						<>
-							<TwoRandomFoodpics foodpic={foodpics[0]} key={foodpics[0].foodpicid}/>
-						<TwoRandomFoodpics foodpic={foodpics[1]} key={foodpics[1].foodpicid}/>
+							<RandomFoodpic foodpic={foodpics[0]} key={foodpics[0].foodpicId}/>
+						<RandomFoodpic foodpic={foodpics[1]} key={foodpics[1].foodpicId}/>
 						</>)}
 					</Row>
 				</Container>
