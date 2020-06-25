@@ -5,6 +5,7 @@ import Image from 'react-bootstrap/Image'
 import Card from 'react-bootstrap/Card'
 import { useDispatch } from 'react-redux'
 import { httpConfig } from '../../utils/http-config'
+import { modifyForkScore } from '../../store/restaurant'
 
 export function RestaurantCard (props) {
   const {restaurant, rank} = props
@@ -22,15 +23,22 @@ export function RestaurantCard (props) {
     forkScore: -1,
   }
 
+  const putRestaurantForkScore = (value, oldRestaurant) => {
+    const newRestaurant = {...oldRestaurant}
+    newRestaurant.forkScore = newRestaurant.forkScore + value
+    return newRestaurant
+  }
+
   const submitUpFork = () => {
-    dispatch()
+
+    dispatch(modifyForkScore(putRestaurantForkScore(1, restaurant)))
     httpConfig.post("/apis/fork", upFork).then(reply => {
       let {message, type} = reply
     })
   }
 
   const submitDownFork = () => {
-    dispatch()
+    dispatch(modifyForkScore(putRestaurantForkScore(-1, restaurant)))
     httpConfig.post("/apis/fork", downFork).then(reply => {
       let {message, type} = reply
     })

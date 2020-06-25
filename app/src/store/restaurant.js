@@ -9,11 +9,14 @@ const slice = createSlice({
       return action.payload
     }, getTop5Restaurant : (posts, action) => {
       return action.payload
+    }, modifyForkScore : (restaurants, action) => {
+      const index = restaurants.findIndex(restaurant => action.payload.restaurantId === restaurant.restaurantId)
+      restaurants[index] = action.payload
     }
   }
 })
 
-export const {getAllRestaurants, getTop5Restaurant} = slice.actions
+export const {getAllRestaurants, getTop5Restaurant, modifyForkScore} = slice.actions
 
 export const fetchAllRestaurants = () => async (dispatch) => {
   const {data} = await httpConfig(`/apis/restaurant`)
