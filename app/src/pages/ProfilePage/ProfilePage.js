@@ -12,6 +12,11 @@ import { ImageDropZone } from './ImageDropZone'
 import { Formik } from 'formik'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { EditProfileForm } from './pictureUploadForm'
+import { RestaurantCard } from '../RestaurantPage/RestaurantCard'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchAllRestaurants } from '../../store/restaurant'
+import { fetchAllFoodpic } from '../../store/foodpic'
+import { ProfilePics } from './ProfilePics'
 
 //**Here is the inline styling for text and background
 //style={{ backgroundColor: 'rgb(255, 137, 6)' }} This is the navbar and footer
@@ -19,6 +24,15 @@ import { EditProfileForm } from './pictureUploadForm'
 //style={{ color: 'rgb(167, 169, 190)'}} This is for the text
 
 export function ProfilePage (props) {
+	const dispatch = useDispatch()
+
+	const foodpics = useSelector(store => store.foodpics ? store.foodpics : [])
+
+	const sideEffects = () => {
+		dispatch(fetchAllFoodpic())
+	}
+
+	React.useEffect(sideEffects, [])
 
 	const {
 		setFieldValue,
@@ -71,51 +85,7 @@ export function ProfilePage (props) {
 	<Container fluid className="py-5">
 
 		<Row className="d-flex justify-content-around">
-			<Col xs={6} md={4} lg={2}>
-				<Image fluid src="carl-pic.png" alt="this is a box of mac and cheese" width={200}/>
-			</Col>
-			<Col xs={6} md={4} lg={2}>
-				<Image fluid src="kevin-picture.png" alt="this is a box of mac and cheese"width={200}/>
-			</Col>
-			<Col xs={6} md={4} lg={2}>
-				<Image fluid src="matt-pic.png" alt="this is a box of mac and cheese"width={200}/>
-			</Col>
-			<Col xs={6} md={4} lg={2}>
-				<Image fluid src="carl-pic.png" alt="this is a box of mac and cheese"width={200}/>
-			</Col>
-			<Col xs={6} md={4} lg={2}>
-				<Image fluid src="kevin-picture.png" alt="this is a box of mac and cheese"width={200}/>
-			</Col>
-			<Col xs={6} md={4} lg={2}>
-				<Image fluid src="matt-pic.png" alt="this is a box of mac and cheese"width={200}/>
-			</Col>
-			{/*<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>*/}
-			{/*<Image src="kevin-foodpic.png" alt="this is a box of mac and cheese"/>*/}
-			{/*<Image src="matt-pic.png" alt="this is a box of mac and cheese"/>*/}
-			{/*<Image src="carl-pic.png" alt="this is a box of mac and cheese"/>*/}
-			{/*<Image src="kevin-foodpic.png" alt="this is a box of mac and cheese"/>*/}
-			{/*<Image src="matt-pic.png" alt="this is a box of mac and cheese"/>*/}
-		</Row>
-
-		<Row className="d-flex justify-content-around pt-5" >
-			<Col xs={6} md={4} lg={2}>
-				<Image fluid src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			</Col>
-			<Col xs={6} md={4} lg={2}>
-				<Image fluid src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			</Col>
-			<Col xs={6} md={4} lg={2}>
-			<Image fluid src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			</Col>
-			<Col xs={6} md={4} lg={2}>
-			<Image fluid src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			</Col>
-			<Col xs={6} md={4} lg={2}>
-			<Image fluid src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			</Col>
-			<Col xs={6} md={4} lg={2}>
-			<Image fluid src="blue-box-300px.jpg" alt="this is a box of mac and cheese"/>
-			</Col>
+			{foodpics.map((foodpic) => <ProfilePics foodpic={foodpic} key={foodpic.foodpicId} />)}
 		</Row>
 		<Row>
 			<Col className="py-5">

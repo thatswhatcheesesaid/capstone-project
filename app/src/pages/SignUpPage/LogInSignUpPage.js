@@ -11,12 +11,12 @@ import { LogIn} from './LogIn/LogIn'
 export function LogInSignUp() {
 	return(
 		<>
-			<Container fluid style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
+			<Container fluid className="text-white" style={{ backgroundColor: 'rgb(15, 14, 23)' }}>
 				<Row>
-					<Col>
+					<Col md={6}>
 						<SignUp/>
 					</Col>
-					<Col>
+					<Col md={6}>
 						<LogIn/>
 					</Col>
 				</Row>

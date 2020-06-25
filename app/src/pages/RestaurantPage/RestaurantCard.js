@@ -3,9 +3,39 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import Card from 'react-bootstrap/Card'
+import { useDispatch } from 'react-redux'
+import { httpConfig } from '../../utils/http-config'
 
 export function RestaurantCard (props) {
   const {restaurant, rank} = props
+
+  const dispatch = useDispatch()
+  const upFork = {
+    forkProfileId: null,
+    forkRestaurantId: restaurant.restaurantId,
+    forkScore: 1,
+  }
+
+  const downFork = {
+    forkProfileId: null,
+    forkRestaurantId: restaurant.restaurantId,
+    forkScore: -1,
+  }
+
+  const submitUpFork = () => {
+    dispatch()
+    httpConfig.post("/apis/fork", upFork).then(reply => {
+      let {message, type} = reply
+    })
+  }
+
+  const submitDownFork = () => {
+    dispatch()
+    httpConfig.post("/apis/fork", downFork).then(reply => {
+      let {message, type} = reply
+    })
+  }
+
   return(
     <>
       <Card className="my-3 border-0 bg-transparent">
@@ -14,8 +44,8 @@ export function RestaurantCard (props) {
           <Col md={2} className="display-1 pt-3 text-center">{rank}</Col>
           <Col md={1} className="pt-4 text-center">
             <label htmlFor="upfork">Upfork</label>
-            <input type="image" id="upfork" src="upfork.png" alt="Submit Upfork" width={50} />
-            <input type="image" id="downfork" src="downfork.png" alt="Submit Downfork" width={50} className="pl-1 pt-2" />
+            <input type="image" onClick={submitUpFork} id="upfork" src="upfork.png" alt="Submit Upfork" width={50} />
+            <input type="image" onClick={submitDownFork} id="downfork" src="downfork.png" alt="Submit Downfork" width={50} className="pl-1 pt-2" />
             <label for="downfork">Downfork</label>
           </Col>
           <Col md={1} className="text-center">
