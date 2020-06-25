@@ -10,12 +10,13 @@ import {deleteFoodpic} from "../../utils/foodpic/deleteFoodpic";
 import {insertFoodpic} from "../../utils/foodpic/insertFoodpic";
 import {selectAllFoodpics} from "../../utils/foodpic/selectAllFoodpics";
 import {selectFoodpicByFoodpicProfileId} from "../../utils/foodpic/selectFoodpicByFoodpicProfileId";
-import {getHeapCodeStatistics} from "v8";
+import {isLoggedIn} from "../controllers/isLoggedIn.controller";
+
 
 export const FoodpicRoute = Router()
 
 FoodpicRoute.route("/")
-	.post(postFoodpicController)
+	.post(isLoggedIn, postFoodpicController)
 	.get(getAllFoodpicsController)
 
 FoodpicRoute.route("/:foodpicId")

@@ -4,12 +4,13 @@ import {
     postCheeseyScoreController,
     getAllCheeseyController
 } from "../controllers/cheesey.controller";
+import {isLoggedIn} from "../controllers/isLoggedIn.controller";
 
 
 export const CheeseyRoute = Router()
 
 CheeseyRoute.route("/")
-    .post(postCheeseyScoreController)
+    .post(isLoggedIn, postCheeseyScoreController)
     .get(getAllCheeseyController)
 
 CheeseyRoute.route("/foodpicId/:foodpicId/profileId/:profileId")
