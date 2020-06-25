@@ -11,6 +11,8 @@ import {insertFoodpic} from "../../utils/foodpic/insertFoodpic";
 import {selectAllFoodpics} from "../../utils/foodpic/selectAllFoodpics";
 import {selectFoodpicByFoodpicProfileId} from "../../utils/foodpic/selectFoodpicByFoodpicProfileId";
 import {isLoggedIn} from "../controllers/isLoggedIn.controller";
+import {getTop5RestaurantController} from "../controllers/restaurant.controller";
+import {RestaurantRoute} from "./restaurant.route";
 
 
 export const FoodpicRoute = Router()

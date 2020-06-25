@@ -7,6 +7,7 @@ import {selectFoodpicByFoodpicProfileId} from "../../utils/foodpic/selectFoodpic
 import {selectAllFoodpics} from "../../utils/foodpic/selectAllFoodpics";
 import {validationResult} from "express-validator";
 import exp from "constants";
+import {selectTopFiveFoodpics} from "../../utils/foodpic/selectTopFivefoodpics";
 
 export async function deleteFoodpicController(request: Request, response: Response, nextFunction: NextFunction) {
 	try {
@@ -53,14 +54,15 @@ export async function getAllFoodpicsController(request: Request, response: Respo
 	}
 }
 
-export async function getTopFiveFoodpicsController(request: Request, response: Response, nextFunction: NextFunction) {
+export async function getTopFiveFoodpicsController(request: Request, response:Response, nextFunction: NextFunction) {
 	try {
-		const reply = await selectAllFoodpics()
-		const handleReply = (reply: any[]) => reply.splice(0,5)
+		const reply = await selectTopFiveFoodpics()
+		const handleReply = (reply: any[]) => reply.splice(0, 5)
+		console.log(reply)
 		const data = reply ? handleReply(reply) : []
-		const status: Status = {status: 200, data:data, message: null}
+		const status: Status = {status:200, data: data, message: null};
 		return response.json(status)
-	}catch(error) {
+	} catch (error) {
 		console.log(error)
 	}
 }

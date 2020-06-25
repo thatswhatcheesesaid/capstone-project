@@ -11,7 +11,7 @@ export function TopFiveFoodpics({foodpic, rank}) {
           <Card.Img variant="top" src={foodpic.foodpicUrl} alt={foodpic.foodpicCaption} height={200} width={200} />
           <Card.Body>
             <Card.Title><p>#{rank} Picture</p></Card.Title>
-            <Card.Text><p>Score</p></Card.Text>
+            <Card.Text><p>Score: {foodpic.cheeseyScore}</p></Card.Text>
           </Card.Body>
         </Card>
       </Col>
