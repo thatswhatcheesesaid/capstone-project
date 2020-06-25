@@ -23,7 +23,7 @@ export function RestaurantCard (props) {
             <p className="display-4 pt-2">{restaurant.forkScore}</p>
           </Col>
           <Col md={2} className="text-center pt-2">
-            <Image src="blue-box.jpg" alt="Blue Box Mac" width={200} fluid />
+            <Image src={restaurant.restaurantFeaturedPic} alt={restaurant.restaurantFeaturedPicCaption} width={200} fluid />
           </Col>
           <Col md={4}>
             <Card.Body>
