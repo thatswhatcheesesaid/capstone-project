@@ -15,11 +15,11 @@ export function StaticNavbar () {
 			<Navbar.Brand href="/">
 				<img
 					src="cheesesaid-favicon.png"
-					width="60"
-					height="60"
+					width="45"
+					height="45"
 					className="d-inline-block align-top"
 					alt="That's What Cheese Said Logo"
-				/><span style={{fontSize: 37}}>That's What Cheese Said</span>
+				/><span style={{fontSize: 30}}>That's What Cheese Said</span>
 			</Navbar.Brand>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav"/>
 			<Navbar.Collapse id="responsive-navbar-nav">
