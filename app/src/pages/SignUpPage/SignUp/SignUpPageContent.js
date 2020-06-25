@@ -152,8 +152,9 @@ return (
 			</div>
 
 			<div className="form-group">
-				<button className="btn btn-primary mr-2 px-1" type="submit">Submit</button>
+				<button style={{ backgroundColor: "rgb(246,137,11)"}} className="btn btn-primary mr-2 px-1" type="submit">Submit</button>
 				<button
+					style={{ backgroundColor: "rgb(24,27,172)"}}
 					className="btn btn-primary mx-2"
 					onClick={handleReset}
 					disabled={!dirty || isSubmitting}

@@ -107,8 +107,8 @@ export const EditProfileForm = () => {
 
             }
           </div>
-          <Button variant="primary" type="submit"> Submit </Button>
-          <Button variant="danger" onClick={handleReset}> Reset Form</Button>
+          <Button className="mr-2" style={{ backgroundColor: "rgb(246,137,11)"}} type="submit"> Submit </Button>
+          <Button className="ml-2" style={{ backgroundColor: "rgb(24,27,172)"}} onClick={handleReset}> Reset Form</Button>
         </form>
         </>
         )
