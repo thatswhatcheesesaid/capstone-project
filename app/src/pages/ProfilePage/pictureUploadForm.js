@@ -2,7 +2,7 @@ import React from "react"
 import * as Yup from "yup";
 import { httpConfig } from "../../../src/utils/http-config";
 import { Formik } from "formik";
-import { ProfilePage } from './ProfilePage'
+// import { ProfilePage } from './ProfilePage'
 import { ImageDropZone } from './ImageDropZone'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button } from 'react-bootstrap'
@@ -54,13 +54,13 @@ export const EditProfileForm = () => {
       {(props) => {
         console.log("", props)
         const {
-          status,
+          // status,
           values,
           errors,
           touched,
-          dirty,
+          // dirty,
           setFieldValue,
-          isSubmitting,
+          // isSubmitting,
           handleChange,
           handleBlur,
           handleSubmit,

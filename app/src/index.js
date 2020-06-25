@@ -9,11 +9,9 @@ import { Footer } from './pages/Footer';
 import {LandingPage} from './pages/LandingPage/LandingPage'
 import {ProfilePage} from './pages/ProfilePage/ProfilePage'
 import {StaticNavbar} from './pages/StaticNavbar'
-import {SignUp} from "./pages/SignUp/SignUp";
 import {RestaurantPage} from './pages/RestaurantPage/RestaurantPage'
 import {AboutUsPage} from "./pages/AboutUsPage";
 import {PicturePage} from './pages/PicturePage/PicturePage'
-import {ResetPage} from './pages/ResetPage'
 import{LogInSignUp} from './pages/SignUpPage/LogInSignUpPage'
 
 import reducer from "./store"

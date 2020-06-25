@@ -1,20 +1,9 @@
 import React from "react"
-import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
-//import Image from 'react-bootstrap/Image'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Nav from 'react-bootstrap/Nav'
-import Button from 'react-bootstrap/Button'
-import Image from 'react-bootstrap/Image'
-import Form from 'react-bootstrap/Form'
-import { ImageDropZone } from './ImageDropZone'
-import { Formik } from 'formik'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { EditProfileForm } from './pictureUploadForm'
-import { RestaurantCard } from '../RestaurantPage/RestaurantCard'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchAllRestaurants } from '../../store/restaurant'
 import { fetchAllFoodpic } from '../../store/foodpic'
 import { ProfilePics } from './ProfilePics'
 
@@ -33,20 +22,6 @@ export function ProfilePage (props) {
 	}
 
 	React.useEffect(sideEffects, [])
-
-	const {
-		setFieldValue,
-		status,
-		values,
-		errors,
-		touched,
-		dirty,
-		isSubmitting,
-		handleChange,
-		handleBlur,
-		handleSubmit,
-		handleReset
-	} = props;
 
 	return (
 
