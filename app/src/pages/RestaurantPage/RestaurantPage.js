@@ -21,7 +21,7 @@ export const RestaurantPage = () => {
   React.useEffect(sideEffects, [])
   return(
     <>
-      <main style={{ backgroundColor: 'black' }} className="text-white">
+      <main style={{ backgroundColor: "rgb(15, 14, 23)" }} className="text-white">
 
         {/* Page Title */}
 

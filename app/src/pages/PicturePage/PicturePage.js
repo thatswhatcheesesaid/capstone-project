@@ -49,7 +49,7 @@ export function PicturePage() {
 
 
 {/*This is the body of the page*/}
-		<main style={{ backgroundColor: 'rgb(15, 14, 23)' }} className="text-white">
+		<main style={{ backgroundColor: "rgb(15, 14, 23)" }} className="text-white">
 
 {/*This is the title*/}
 		<Container fluid className="text-center py-5">
