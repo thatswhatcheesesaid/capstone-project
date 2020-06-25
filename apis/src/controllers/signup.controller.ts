@@ -12,7 +12,6 @@ import { v1 as uuidv1 } from 'uuid';
 export async function signupProfileController (request: Request, response: Response) {
     try {
         const {profileEmail, profileName, profilePassword} = request.body;
-        console.log(request.body)
         const profileHash = await setHash(profilePassword);
         const profileActivationToken = setActivationToken();
         const basePath = `${request.protocol}://${request.get(`host`)}${request.originalUrl}/activation/${profileActivationToken}`
@@ -51,7 +50,6 @@ export async function signupProfileController (request: Request, response: Respo
         emailComposer.compile().build((error: any, message: Buffer) => {
             const mg = mailgun({apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN});
 
-            console.log(message.toString("ascii"))
             const compiledEmail = {
                     to: profileEmail,
                     message: message.toString("ascii")
