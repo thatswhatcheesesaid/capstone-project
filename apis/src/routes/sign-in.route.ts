@@ -8,4 +8,4 @@ const { checkSchema } = require('express-validator');
 export const SignInRouter = Router();
 
 SignInRouter.route('/')
-    .post(isLoggedIn, asyncValidatorController(checkSchema(signInValidator)), signInController);
+    .post( asyncValidatorController(checkSchema(signInValidator)), signInController);

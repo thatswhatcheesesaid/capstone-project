@@ -10,7 +10,7 @@ import {deleteFoodpic} from "../../utils/foodpic/deleteFoodpic";
 import {insertFoodpic} from "../../utils/foodpic/insertFoodpic";
 import {selectAllFoodpics} from "../../utils/foodpic/selectAllFoodpics";
 import {selectFoodpicByFoodpicProfileId} from "../../utils/foodpic/selectFoodpicByFoodpicProfileId";
-import {isLoggedIn} from "../controllers/isloggedIn.controller";
+import {isLoggedIn} from "../controllers/isLoggedIn.controller";
 
 
 export const FoodpicRoute = Router()

@@ -1,15 +1,18 @@
 import {NextFunction, Request, Response} from 'express';
-import {JsonWebTokenError, TokenExpiredError, verify, } from "jsonwebtoken";
+import {verify,} from "jsonwebtoken";
 import {Status} from "../../utils/interfaces/status";
-import {Profile} from "../../utils/interfaces/Profile";
+import {Profile} from "../../utils/interfaces/profile";
+
 
 export function isLoggedIn(request: Request, response: Response, next: NextFunction): any {
+    let status: Status = {status: 400, message: "Please login", data: null};
+    const sessionProfile = (request: Request): Profile | undefined => request.session?.profile ?? undefined;
+    const signature = (request: Request): string => request.session?.signature ?? "no signature"
 
-    let status : Status = {status: 400, message: "Please login", data: null};//
-    const sessionProfile  = (request : Request): Profile | undefined => request.session?.profile ?? undefined;
-    const signature = (request : Request) : string => request.session?.signature ?? "no signature"
-    const isSessionActive = (isProfileActive: Profile| undefined) : boolean => isProfileActive ? true : false;
-    const getJwtTokenFromHeader  = (headers: any): string => {
+    const isSessionActive = (isProfileActive: Profile | undefined): boolean => isProfileActive ? true : false;
+
+
+    const getJwtTokenFromHeader = (headers: any): string => {
         return headers["authorization"];
     };
     const unverifiedJwtToken: string = getJwtTokenFromHeader(request.headers);

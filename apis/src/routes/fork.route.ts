@@ -4,7 +4,7 @@ import {
     postForkScoreController,
     getAllForksController
 } from "../controllers/fork.controller";
-import {isLoggedIn} from "../controllers/isloggedIn.controller";
+import {isLoggedIn} from "../controllers/isLoggedIn.controller";
 
 
 export const ForkRoute = Router()

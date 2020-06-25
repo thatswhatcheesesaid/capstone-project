@@ -9,7 +9,7 @@ import {deleteProfile} from "../../utils/profile/deleteProfile";
 import {insertProfile} from "../../utils/profile/insertProfile";
 import {selectProfileByActivationToken} from "../../utils/profile/selectProfileByActivationToken";
 import {selectProfileByProfileId} from "../../utils/profile/selectProfileByProfileId";
-import {isLoggedIn} from "../controllers/isloggedIn.controller";
+import {isLoggedIn} from "../controllers/isLoggedIn.controller";
 
 export const ProfileRoute = Router()
 

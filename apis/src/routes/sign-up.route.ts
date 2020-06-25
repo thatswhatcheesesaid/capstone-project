@@ -12,6 +12,6 @@ export const signupRouter = Router();
 
 
 signupRouter.route('/')
-    .post(isLoggedIn, asyncValidatorController(checkSchema(signupValidator)), signupProfileController);
+    .post( asyncValidatorController(checkSchema(signupValidator)), signupProfileController);
 
 signupRouter.route('/activation/:activation').get(activationController)
