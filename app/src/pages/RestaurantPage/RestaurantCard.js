@@ -29,8 +29,8 @@ export function RestaurantCard (props) {
             <Card.Body>
               <Card.Title><h3>{restaurant.restaurantName}</h3></Card.Title>
               <Card.Text>
-                <p>{restaurant.restaurantGoogleLink}</p>
-                <p>{restaurant.restaurantSocialMediaUrl}</p>
+                <p><a href={restaurant.restaurantGoogleLink}>Click here for more info</a></p>
+                <p><a href={restaurant.restaurantSocialMediaUrl}>@social_media_link</a></p>
               </Card.Text>
             </Card.Body>
           </Col>
