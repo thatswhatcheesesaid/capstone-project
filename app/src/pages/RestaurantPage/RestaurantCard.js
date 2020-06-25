@@ -56,7 +56,7 @@ export function RestaurantCard (props) {
             <Image src={restaurant.restaurantFeaturedPic} alt={restaurant.restaurantFeaturedPicCaption} width={200} fluid />
           </Col>
           <Col md={4}>
-            <Card.Body>
+            <Card.Body className="text-center">
               <Card.Title><h3>{restaurant.restaurantName}</h3></Card.Title>
               <Card.Text>
                 <p><a href={restaurant.restaurantGoogleLink}>Click here for more info</a></p>

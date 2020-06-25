@@ -28,7 +28,7 @@ export const RestaurantPage = () => {
         <Container className="text-center py-5">
           <Row>
             <Col>
-              <h1 className="display-1">Restaurants</h1>
+              <h1 className="display-1"><u>Restaurants</u></h1>
               <p className="display-4 pt-5">The Best Mac you can buy in ABQ, ranked by <u>YOU!</u></p>
             </Col>
           </Row>

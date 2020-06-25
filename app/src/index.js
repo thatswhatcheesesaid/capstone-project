@@ -34,10 +34,8 @@ const Routing = () => (
         <Route exact path="/" component={LandingPage}/>
         <Route exact path="/profile" component={ProfilePage}/>
         <Route exact path="/restaurants" component={RestaurantPage}/>
-        <Route exact path="/logIn" component={SignUp}/>
         <Route exact path="/aboutUs" component={AboutUsPage}/>
         <Route exact path="/cheesey" component={PicturePage}/>
-        <Route exact path="/reset" component={ResetPage}/>
         <Route exact path="/logInSignUp" component={LogInSignUp}/>
         <Route component={Home}/>
         <Route component={FourOhFour}/>

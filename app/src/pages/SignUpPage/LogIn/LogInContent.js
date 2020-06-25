@@ -73,16 +73,16 @@ export const LogInContent = (props) => {
 				</div>
 
 				<div className="form-group">
-					<button className="btn btn-primary mb-2 px-1" type="submit">Submit</button>
+					<button className="btn btn-primary mr-2 px-1" type="submit">Submit</button>
 					<button
-						className="btn btn-primary mb-2"
+						className="btn btn-primary mx-2"
 						onClick={handleReset}
 						disabled={!dirty || isSubmitting}
 					>Reset
 					</button>
 				</div>
 
-				<FormDebugger {...props} />
+
 			</form>
 
 			{

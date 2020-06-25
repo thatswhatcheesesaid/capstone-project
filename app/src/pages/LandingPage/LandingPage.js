@@ -45,10 +45,8 @@ export const LandingPage = () => {
           </Row>
         </Container>
         <Container className="text-center" fluid>
-          <Row>
-            <Col></Col>
+          <Row className="justify-content-center">
             {restaurants.map((restaurant, index) => <Top5RestaurantCard restaurant={restaurant} key={restaurant.restaurantId} rank={index+1} />)}
-            <Col></Col>
           </Row>
           <Row>
             <Col className="text-center">
@@ -63,10 +61,8 @@ export const LandingPage = () => {
           </Row>
         </Container>
         <Container className="text-center" fluid>
-          <Row>
-            <Col></Col>
+          <Row className="justify-content-center">
             {topFivePics.map((foodpic, index) => <TopFiveFoodpics foodpic={foodpic} key={foodpic.foodpicId} rank={index+1} />)}
-            <Col></Col>
           </Row>
           <Row>
             <Col className="text-center">

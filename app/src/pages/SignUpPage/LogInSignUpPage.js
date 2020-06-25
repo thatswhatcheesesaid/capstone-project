@@ -18,6 +18,7 @@ export function LogInSignUp() {
 					</Col>
 					<Col md={6}>
 						<LogIn/>
+						<Image className="mx-auto my-0 d-block" src="twcs-logo-white.png" alt="That's What Cheese Said" width={275} />
 					</Col>
 				</Row>
 			</Container>

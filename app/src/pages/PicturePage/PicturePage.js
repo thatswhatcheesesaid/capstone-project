@@ -54,11 +54,13 @@ export function PicturePage() {
 {/*This is the title*/}
 		<Container fluid className="text-center py-5">
 			<h1 className="display-1"><u>Mac and Cheese</u></h1>
+			<h1 className="text-center">Vote on the cheesiest pictures. Each click will shuffle new pictures for more votes.</h1>
 		</Container>
+
 
 			{/*This is the voting*/}
 			<Container fluid>
-				<h1 className="display-3 text-center py-4">Vote Here</h1>
+				<h1 className="display-3 text-center py-3">Vote Here</h1>
 				<Row className="justify-content-center">
 					{foodpics.length > 2 && (
 						<>
