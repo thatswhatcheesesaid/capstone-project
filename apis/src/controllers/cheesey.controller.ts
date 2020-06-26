@@ -29,8 +29,9 @@ export async function getAllCheeseyController(request: Request, response: Respon
 
 export async function postCheeseyScoreController(request: Request, response: Response, nextFunction: NextFunction) {
     try {
-        const {cheeseyFoodpicId, cheeseyProfileId, cheeseyScore} = request.body
-
+        const {cheeseyFoodpicId, cheeseyScore} = request.body
+        const profile = request?.session?.profile
+        const cheeseyProfileId = profile?.profileId ?? null
         const cheesey: Cheesey = {cheeseyFoodpicId, cheeseyProfileId, cheeseyScore}
         const result = await insertCheeseyScore(cheesey)
         return response.json({status: 200, data: null, message: result})

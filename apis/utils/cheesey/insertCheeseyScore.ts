@@ -9,7 +9,7 @@ export async function insertCheeseyScore(cheesey: Cheesey) {
         const [rows] = await mySqlConnection.execute(mySqlQuery, cheesey)
         return 'CheeseyScore created successfully'
     } catch (error) {
-        console.log(error)
+        console.log("this is where i die a quiet death", error)
     }
 }
 

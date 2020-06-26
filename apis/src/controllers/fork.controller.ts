@@ -30,7 +30,9 @@ export async function getAllForksController(request: Request, response: Response
 
 export async function postForkScoreController(request: Request, response: Response, nextFunction: NextFunction) {
     try {
-        const {forkProfileId, forkRestaurantId, forkScore} = request.body
+        const {forkRestaurantId, forkScore} = request.body
+        const profile = request?.session?.profile
+        const forkProfileId = profile?.profileId ?? null
         const fork: Fork = {forkProfileId, forkRestaurantId, forkScore}
         const result = await insertForkScore(fork)
         return response.json({status: 200, data: null, message: result})

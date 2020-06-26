@@ -1,11 +1,7 @@
 import React from "react"
-import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
-import Image from 'react-bootstrap/Image'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Nav from 'react-bootstrap/Nav'
-import Button from 'react-bootstrap/Button'
 // import Style from 'react-bootstrap/Style'
 
 //**Here is the inline styling for text and background
@@ -17,7 +13,7 @@ export function Footer() {
 
 	function getYear() {
 		const date = new Date()
-		let year = date.getFullYear()
+		// let year = date.getFullYear()
 		return date.getFullYear()
 	}
 	return(

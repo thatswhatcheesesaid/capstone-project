@@ -7,6 +7,7 @@ import {selectFoodpicByFoodpicProfileId} from "../../utils/foodpic/selectFoodpic
 import {selectAllFoodpics} from "../../utils/foodpic/selectAllFoodpics";
 import {validationResult} from "express-validator";
 import exp from "constants";
+import {selectTopFiveFoodpics} from "../../utils/foodpic/selectTopFivefoodpics";
 
 export async function deleteFoodpicController(request: Request, response: Response, nextFunction: NextFunction) {
 	try {
@@ -21,8 +22,10 @@ export async function deleteFoodpicController(request: Request, response: Respon
 
 export async function postFoodpicController(request: Request, response: Response, nextFunction: NextFunction) {
 	try {
-		const {foodpicProfileId, foodpicRestaurantId, foodpicCaption, foodpicUrl} = request.body
-		const foodpic: Foodpic = {foodpicId: null, foodpicProfileId, foodpicRestaurantId, foodpicCaption, foodpicUrl}
+		const {foodpicRestaurantId, foodpicCaption, foodpicUrl} = request.body
+		const profile = request?.session?.profile
+		const foodpicProfileId = profile?.profileId ?? null
+		const foodpic: Foodpic = {foodpicId: null, foodpicProfileId, foodpicRestaurantId: null, foodpicCaption, foodpicUrl}
 		const result = await insertFoodpic(foodpic)
 		return response.json({status: 200, data: null, message: result})
 	} catch(error) {
@@ -45,6 +48,33 @@ export async function getAllFoodpicsController(request: Request, response: Respo
 	try {
 		const data = await selectAllFoodpics()
 		const status: Status = {status: 200, data, message: null}
+		return response.json(status)
+	}catch(error) {
+		console.log(error)
+	}
+}
+
+export async function getTopFiveFoodpicsController(request: Request, response:Response, nextFunction: NextFunction) {
+	try {
+		const reply = await selectTopFiveFoodpics()
+		const handleReply = (reply: any[]) => reply.splice(0, 5)
+		console.log(reply)
+		const data = reply ? handleReply(reply) : []
+		const status: Status = {status:200, data: data, message: null};
+		return response.json(status)
+	} catch (error) {
+		console.log(error)
+	}
+}
+
+
+export async function getTwoRandomFoodpicsController (request: Request, response: Response, nextFunction: NextFunction) {
+	try {
+		const reply = await selectAllFoodpics()
+		//randomizing function needed
+		const handleReply = (reply: any[]) => reply.splice(0,2)
+		const data = reply ? handleReply(reply) : []
+		const status: Status = {status: 200, data:data, message: null}
 		return response.json(status)
 	}catch(error) {
 		console.log(error)

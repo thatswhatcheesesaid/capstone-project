@@ -2,7 +2,8 @@ import {Router} from "express";
 import {
     deleteRestaurantController,
     getAllRestaurantsController,
-    postRestaurantController
+    postRestaurantController,
+    getTop5RestaurantController
 } from "../controllers/restaurant.controller";
 import {deleteRestaurant} from "../../utils/restaurant/deleteRestaurant";
 import {insertRestaurant} from "../../utils/restaurant/insertRestaurant";
@@ -16,4 +17,7 @@ RestaurantRoute.route("/")
 
 RestaurantRoute.route("/:restaurantId")
     .delete(deleteRestaurantController)
+
+RestaurantRoute.route("/top5")
+    .get(getTop5RestaurantController)
 

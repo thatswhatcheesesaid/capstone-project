@@ -1,6 +1,4 @@
 import React from 'react'
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Dropdown from 'react-bootstrap/Dropdown'
@@ -13,13 +11,13 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 export function AboutUsPage() {
 	return (
 		<>
-			<Container fluid className="text-center py-5" style={{backgroundColor: 'rgb(15, 14, 23)'}}>
+			<Container fluid className="text-center text-white py-5" style={{backgroundColor: 'rgb(15, 14, 23)'}}>
 				<Row>
-					<Col style={{color: 'rgb(167, 169, 190)'}}>
+					<Col>
 
 						{/* This is the About us section */}
 
-						<h1>About Us</h1>
+						<h1><u>About Us</u></h1>
 						<p>Squirty cheese manchego cheesecake. Squirty cheese mascarpone stinking bishop stinking bishop
 							fromage cheese and wine mascarpone chalk and cheese. Cheeseburger cream cheese stinking bishop
 							halloumi smelly cheese taleggio brie lancashire. Pecorino dolcelatte cheese and wine smelly cheese
@@ -33,9 +31,9 @@ export function AboutUsPage() {
 
 				{/* This is the contact form */}
 
-				<h1 style={{color: 'rgb(167, 169, 190)'}}>Contact</h1>
+				<h1><u>Contact</u></h1>
 				<Row>
-					<Col style={{color: 'rgb(167, 169, 190)'}}>
+					<Col>
 						<Form>
 							<Form.Group controlId="name">
 								<Form.Control type="name" placeholder="Your name"/>
@@ -57,7 +55,7 @@ export function AboutUsPage() {
 						</Form>
 					</Col>
 
-					<Col style={{color: 'rgb(167, 169, 190)'}}>
+					<Col>
 						<textarea className="form-control" id="message" placeholder="Your Message" name="message"
 									 rows="5">Your message</textarea>
 					</Col>

@@ -4,16 +4,21 @@ import {
 	postFoodpicController,
 	getAllFoodpicsController,
 	getFoodpicByFoodpicProfileIdController,
+	getTopFiveFoodpicsController
 } from "../controllers/foodpic.controller";
 import {deleteFoodpic} from "../../utils/foodpic/deleteFoodpic";
 import {insertFoodpic} from "../../utils/foodpic/insertFoodpic";
 import {selectAllFoodpics} from "../../utils/foodpic/selectAllFoodpics";
 import {selectFoodpicByFoodpicProfileId} from "../../utils/foodpic/selectFoodpicByFoodpicProfileId";
+import {isLoggedIn} from "../controllers/isLoggedIn.controller";
+import {getTop5RestaurantController} from "../controllers/restaurant.controller";
+import {RestaurantRoute} from "./restaurant.route";
+
 
 export const FoodpicRoute = Router()
 
 FoodpicRoute.route("/")
-	.post(postFoodpicController)
+	.post(isLoggedIn, postFoodpicController)
 	.get(getAllFoodpicsController)
 
 FoodpicRoute.route("/:foodpicId")
@@ -21,3 +26,6 @@ FoodpicRoute.route("/:foodpicId")
 
 FoodpicRoute.route("/foodpic/:foodpicProfileId")
 	.get(getFoodpicByFoodpicProfileIdController)
+
+FoodpicRoute.route("/topFive")
+	.get(getTopFiveFoodpicsController)
