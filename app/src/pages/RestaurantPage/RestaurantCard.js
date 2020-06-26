@@ -25,7 +25,9 @@ export function RestaurantCard (props) {
 
   const putRestaurantForkScore = (value, oldRestaurant) => {
     const newRestaurant = {...oldRestaurant}
-    newRestaurant.forkScore = newRestaurant.forkScore + value
+    newRestaurant.forkScore === null ? newRestaurant.forkScore = 0 : parseInt(newRestaurant.forkScore)
+    newRestaurant.forkScore = newRestaurant.forkScore + parseInt(value)
+
     return newRestaurant
   }
 
