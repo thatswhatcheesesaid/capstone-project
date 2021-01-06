@@ -28,7 +28,7 @@
   "dependencies": {
     "argon": "^2.0.21",
     "argon2": "^0.26.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "cloudinary": "^1.22.0",
     "cookie-parser": "^1.4.5",
     "crypto": "^1.0.1",
